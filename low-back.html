@@ -1,0 +1,35 @@
+<!doctype html>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Low-Back Decompress (10 min) | F.I.T.T 21-20</title>
+<style>
+  body{margin:0;font:16px/1.6 system-ui;background:#0b0f13;color:#e9eef2}
+  .wrap{max-width:900px;margin:auto;padding:24px}
+  h1{margin:0 0 12px}
+  .card{background:#111720;border:1px solid #1f2a36;border-radius:12px;padding:16px}
+  .btn{display:inline-block;margin:6px 8px 0 0;padding:12px 18px;border-radius:10px;text-decoration:none;background:#10b981;color:#04170f;font-weight:700}
+  #t{font-size:2rem;margin-top:8px}
+</style>
+<div class="wrap">
+  <h1>Low-Back Decompress (10 min)</h1>
+  <div class="card">
+    <ol>
+      <li>Pelvic control + hinge — practice 30s, then hold <strong>45s ×2</strong></li>
+      <li>Hamstring (soft knee) — <strong>45s/side</strong></li>
+      <li>Glute/piriformis — <strong>45s/side</strong></li>
+      <li>Calf (bent-knee) — <strong>30–45s/side</strong></li>
+      <li>Bar reach (long spine) — <strong>45–60s</strong></li>
+      <li>Box breathing 4-4-4-4 × 4</li>
+    </ol>
+    <a class="btn" href="#t" onclick="start(600)">Start 10:00 timer</a>
+    <p id="t"></p>
+  </div>
+</div>
+<script>
+function start(s){
+  const el=document.getElementById('t'); clearInterval(window._ti);
+  window._ti=setInterval(()=>{
+    el.textContent=new Date(s--*1000).toISOString().substr(14,5);
+    if(s<0){clearInterval(window._ti); el.textContent="Done — wipe pads.";}
+  },1000);
+}
+</script>
