@@ -3,194 +3,166 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>F.I.T.T 21-20 — 24/7 Gym</title>
-
-  <!-- bump this number if you ever need to force refresh -->
-  <link rel="stylesheet" href="styles.css?v=11" />
-  <meta name="description" content="One price. 24/7 access. Strength floor, 2 infrared saunas, and a Technogym Flexability station. Grovetown, GA." />
+  <title>F.I.T.T 21-20 — One price. 24/7. Everything included.</title>
+  <meta name="description" content="Veteran-owned 24/7 gym. Strength floor, 2 infrared saunas, Technogym Flexability Posterior. One price. All access." />
+  <link rel="stylesheet" href="styles.css?v=13" />
 </head>
-
 <body>
-  <!-- NAV -->
-  <nav class="nav">
-    <div class="wrap nav-inner">
-      <div class="brand">F.I.T.T 21-20</div>
-      <div class="links">
+
+  <!-- Top Nav -->
+  <header class="top">
+    <div class="wrap nav">
+      <a class="brand" href="#">F.I.T.T <span>21-20</span></a>
+
+      <nav class="mainnav">
         <a href="#inside">Inside</a>
         <a href="#how">How it works</a>
         <a href="#pricing">Pricing</a>
         <a href="#location">Location</a>
-      </div>
-      <div class="actions">
-        <a class="btn btn-lg" href="#">Join $69/mo</a>
-        <a class="btn-outline btn-lg" href="#">Day Pass $15</a>
-      </div>
-    </div>
-  </nav>
+      </nav>
 
-  <!-- HERO -->
-  <header class="wrap hero" id="inside">
-    <div class="hero-card">
-      <div class="hero-inner">
-        <div>
-          <h1>
-            ONE PRICE. <span class="grad">24/7.</span><br />
-            EVERYTHING<br />INCLUDED.
-          </h1>
-
-          <div class="chips">
-            <span class="chip">Veteran owned</span>
-            <span class="chip">App entry</span>
-            <span class="chip">No contracts</span>
-            <span class="chip">Sauna + Stretch included</span>
-          </div>
-
-          <div class="qr-links">
-            <a class="btn btn-lg" href="#">Join now</a>
-            <a class="btn-outline btn-lg" href="#">Grab a Day Pass</a>
-          </div>
-        </div>
-
-        <aside class="cta">
-          <h3>5047 Parham Rd</h3>
-          <p class="small">24/7 member access • Staffed hours posted on site</p>
-          <ul>
-            <li>✓ Secure, app-based door access</li>
-            <li>✓ Full strength floor + cardio</li>
-            <li>✓ 2× Infrared saunas included</li>
-            <li>✓ Technogym Flexability station</li>
-          </ul>
-          <div style="margin-top:14px">
-            <a class="btn btn-lg" href="#">Start Membership</a>
-            <a class="btn-outline btn-lg" href="#">Day Pass</a>
-          </div>
-        </aside>
+      <div class="top-ctas">
+        <a class="btn btn-primary" href="#join">Join $69/mo</a>
+        <a class="btn btn-outline" href="#daypass">Day Pass $15</a>
       </div>
     </div>
   </header>
 
-  <!-- FEATURE IMAGE (squat / lift) -->
-  <section class="wrap feature" aria-label="Gym action photo">
-    <figure class="feature-card">
-      <img
-        referrerpolicy="no-referrer"
-        src="https://images.unsplash.com/photo-1546484959-f9a53db89c39?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
-        alt="Athlete setting up for a lift on platform"
-        loading="lazy"
-        onerror="this.onerror=null;this.src='https://images.pexels.com/photos/2261485/pexels-photo-2261485.jpeg?auto=compress&cs=tinysrgb&w=1600&q=80';"
-      />
-    </figure>
-  </section>
+  <main>
 
-  <!-- WHAT’S INSIDE -->
-  <section class="wrap section">
-    <h2><span class="dot"></span> What’s inside</h2>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="wrap grid-hero">
+        <div class="hero-copy">
+          <h1>
+            ONE PRICE. <span class="accent">24/7.</span><br/>
+            EVERYTHING<br/> INCLUDED.
+          </h1>
 
-    <div class="grid">
-      <article class="card">
-        <div class="icon">
-          <svg viewBox="0 0 24 24"><path d="M3 12h5m8 0h5M8 9v6m8-6v6M11 7v10m2-10v10" stroke="currentColor" fill="none" stroke-width="2"/></svg>
+          <p class="features-inline">
+            Strength floor • 2 Infrared Saunas • Technogym Flexability Posterior
+          </p>
+
+          <div class="pills">
+            <span class="pill">Veteran owned</span>
+            <span class="pill">App entry</span>
+            <span class="pill">Sauna + Stretch included</span>
+          </div>
+
+          <div class="cta-row">
+            <a id="join" class="btn btn-primary" href="#">Join now</a>
+            <a id="daypass" class="btn btn-soft" href="#">Grab a Day Pass</a>
+          </div>
         </div>
-        <h3>Strength</h3>
-        <p>Two half racks on 8’×8’ platforms, Smith, DAP, hack/leg press, dumbbells 5–100 lb, Olympic bars & plates.</p>
-      </article>
 
-      <article class="card">
-        <div class="icon">
-          <svg viewBox="0 0 24 24"><path d="M12 3v18M6 8c0 3 6 3 6 6s-6 3-6 6M18 5c0 2-6 2-6 4" stroke="currentColor" fill="none" stroke-width="2"/></svg>
+        <!-- Right feature card -->
+        <aside class="feature-card" id="location">
+          <h3>5047 Parham Rd</h3>
+          <p class="muted">24/7 member access • Staffed hours posted on site</p>
+          <ul class="checks">
+            <li>Secure, app-based door access</li>
+            <li>Full strength floor + cardio</li>
+            <li>2× Infrared saunas included</li>
+            <li>Technogym Flexability station</li>
+          </ul>
+          <div class="card-ctas">
+            <a class="btn btn-primary" href="#">Start Membership</a>
+            <a class="btn btn-outline" href="#">Day Pass</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- BIG IMAGE – aligned to content edges -->
+    <section class="feature edge" aria-label="Gym action photo">
+      <figure class="feature-media">
+        <img
+          src="https://images.unsplash.com/photo-1549049950-48d5887197a3?auto=format&fit=crop&w=1920&q=80"
+          alt="Athlete setting up for a squat on platform"
+          loading="lazy"
+        />
+      </figure>
+    </section>
+
+    <!-- INSIDE -->
+    <section id="inside" class="inside">
+      <div class="wrap">
+        <h2>What’s inside</h2>
+
+        <div class="cards">
+          <article class="card">
+            <div class="icon">🏋️‍♂️</div>
+            <h3>Strength</h3>
+            <p>Two half racks on 8’×8’ platforms, Smith, DAP, leg press/hack. Dumbbells 5–100 lb, Olympic bars & plates.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon">🔥</div>
+            <h3>Infrared Saunas</h3>
+            <p>Two IR saunas (15–20 min). Hydrate, recover faster, then hit our 8-min Post-Sauna Reset.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon">🧘</div>
+            <h3>Technogym Stretch</h3>
+            <p>Self-guided mobility on the Flexability Posterior: quick Pre-Lift and Low-Back routines.</p>
+          </article>
         </div>
-        <h3>Infrared Saunas</h3>
-        <p>Two IR saunas (15–20 min). Hydrate, recover faster, then hit our 8-min Post-Sauna Reset.</p>
-      </article>
+      </div>
+    </section>
 
-      <article class="card">
-        <div class="icon">
-          <svg viewBox="0 0 24 24"><path d="M4 20c4-8 12-8 16 0M8 11a3 3 0 1 0 6 0 3 3 0 0 0-6 0" stroke="currentColor" fill="none" stroke-width="2"/></svg>
+    <!-- HOW (placeholder anchors, copy later if you want) -->
+    <section id="how" class="how">
+      <div class="wrap">
+        <h2>How it works</h2>
+        <ol class="steps">
+          <li><strong>Join online</strong> — pick All-Access or a Day Pass. No contracts talk, just value.</li>
+          <li><strong>App unlock</strong> — your phone becomes the key. 24/7 access.</li>
+          <li><strong>Train</strong> — lift, sauna, stretch. Everything included.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" class="pricing">
+      <div class="wrap">
+        <h2>Pricing</h2>
+        <div class="price-grid">
+          <div class="price">
+            <h3>All-Access</h3>
+            <div class="amount">$69<span>/mo</span></div>
+            <ul>
+              <li>24/7 entry (app)</li>
+              <li>Strength + cardio</li>
+              <li>2× Infrared saunas</li>
+              <li>Technogym stretch station</li>
+            </ul>
+            <a class="btn btn-primary" href="#">Start Membership</a>
+          </div>
+
+          <div class="price">
+            <h3>Day Pass</h3>
+            <div class="amount">$15</div>
+            <ul>
+              <li>Same-day access</li>
+              <li>All areas included</li>
+            </ul>
+            <a class="btn btn-outline" href="#">Grab a Day Pass</a>
+          </div>
         </div>
-        <h3>Technogym Stretch</h3>
-        <p>Self-guided mobility on the Flexability Posterior with quick Pre-Lift and Low-Back routines.</p>
-      </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <p>© <span id="y"></span> F.I.T.T 21-20 • Veteran owned • Grovetown, GA • info@j3lfamily.com</p>
     </div>
-  </section>
-
-  <!-- HOW IT WORKS -->
-  <section class="wrap section" id="how">
-    <h2><span class="dot"></span> How it works</h2>
-
-    <div class="grid">
-      <article class="card">
-        <h3>1) Join online</h3>
-        <p>Pick All-Access or a Day Pass. No contracts. Cancel anytime.</p>
-      </article>
-      <article class="card">
-        <h3>2) 24/7 entry</h3>
-        <p>Use the app for secure door access. Staffed hours are posted on site for help or tours.</p>
-      </article>
-      <article class="card">
-        <h3>3) Train your way</h3>
-        <p>Strength floor + cardio + recovery. Use our quick Pre-Lift Mobility and Post-Sauna Reset guides.</p>
-      </article>
-    </div>
-  </section>
-
-  <!-- PRICING -->
-  <section class="wrap section" id="pricing">
-    <h2><span class="dot"></span> Pricing</h2>
-
-    <div class="grid">
-      <article class="price">
-        <div class="big">$69<span class="small">/mo</span></div>
-        <ul>
-          <li><span class="check">✓</span>24/7 access</li>
-          <li><span class="check">✓</span>Strength + cardio</li>
-          <li><span class="check">✓</span>2× Infrared saunas</li>
-          <li><span class="check">✓</span>Technogym Flexability station</li>
-          <li><span class="check">✓</span>No contracts</li>
-        </ul>
-        <div style="margin-top:14px">
-          <a class="btn btn-lg" href="#">Join $69/mo</a>
-        </div>
-      </article>
-
-      <article class="price">
-        <div class="big">$15<span class="small"> Day Pass</span></div>
-        <p class="small">Great for drop-ins and visitors.</p>
-        <div style="margin-top:14px">
-          <a class="btn-outline btn-lg" href="#">Grab a Day Pass</a>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <!-- QR LINKS -->
-  <section class="wrap section">
-    <h2><span class="dot"></span> QR Guides</h2>
-    <div class="qr-links">
-      <a class="btn-outline" href="sauna-howto.html">Sauna How-To</a>
-      <a class="btn-outline" href="pre-lift.html#post-sauna">Post-Sauna Reset (8 min)</a>
-      <a class="btn-outline" href="pre-lift.html">Pre-Lift Mobility (5 min)</a>
-      <a class="btn-outline" href="low-back.html">Low-Back Decompress (10 min)</a>
-    </div>
-  </section>
-
-  <!-- MAP -->
-  <section class="wrap section" id="location">
-    <h2><span class="dot"></span> Location</h2>
-    <div class="map">
-      <iframe
-        loading="lazy"
-        src="https://www.google.com/maps?q=5047%20Parham%20Rd&output=embed"
-        allowfullscreen
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
-    </div>
-  </section>
-
-  <footer class="wrap">
-    © <span id="y"></span> F.I.T.T 21-20 • Grovetown, GA • info@j3lfamily.com
   </footer>
 
   <script>
+    // tiny year helper
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 </body>
