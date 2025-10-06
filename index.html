@@ -1,10 +1,11 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>F.I.T.T 21-20 — 24/7 Gym</title>
-  <link rel="stylesheet" href="styles.css?v=2">
+  <!-- cache-buster so you see the latest styles -->
+  <link rel="stylesheet" href="styles.css?v=3" />
 </head>
 <body>
 
@@ -25,12 +26,21 @@
     </div>
   </div>
 
-  <!-- HERO (image is painted on this card via CSS) -->
+  <!-- HERO
+       The squat photo is forced inline here so it ALWAYS shows (beats any cached CSS).
+       Swap the URL if you want a different squat image.
+  -->
   <header class="wrap hero">
-    <div class="hero-card">
+    <div
+      class="hero-card"
+      style="background:
+        linear-gradient(90deg, rgba(252,252,253,1) 0%, rgba(252,252,253,.92) 34%, rgba(252,252,253,.55) 52%, rgba(252,252,253,0) 70%),
+        url('https://images.unsplash.com/photo-1571019614242-c5c5dee9f50f?auto=format&fit=crop&w=1800&q=80')
+        center right / cover no-repeat;"
+    >
       <div class="hero-inner">
         <div>
-          <h1>ONE PRICE. <span style="background:linear-gradient(180deg,#0F766E,#10B981);-webkit-background-clip:text;background-clip:text;color:transparent;">24/7</span>. EVERYTHING INCLUDED.</h1>
+          <h1>ONE PRICE. <span class="grad">24/7</span>. EVERYTHING INCLUDED.</h1>
           <p class="small">Strength floor • 2 Infrared Saunas • Technogym Flexability Posterior</p>
 
           <div class="chips">
@@ -169,12 +179,12 @@
     <p>© F.I.T.T 21-20 • Retired Sergeants Major • No fluff. Train hard. Recover smart.</p>
   </footer>
 
-  <!-- ===== ONE-PLACE ADDRESS CONFIG ===== -->
+  <!-- ONE-LINE ADDRESS CONFIG -->
   <script>
-    const ADDRESS = "5047 Parham Rd"; // <-- change this later if you move
+    const ADDRESS = "5047 Parham Rd"; // change later if needed
     document.querySelectorAll('[data-address]').forEach(el => el.textContent = ADDRESS);
-    const map = document.getElementById('map-iframe');
-    map.src = "https://www.google.com/maps?q=" + encodeURIComponent(ADDRESS) + "&output=embed";
+    document.getElementById('map-iframe').src =
+      "https://www.google.com/maps?q=" + encodeURIComponent(ADDRESS) + "&output=embed";
   </script>
 </body>
 </html>
