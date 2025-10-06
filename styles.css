@@ -1,26 +1,19 @@
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Bebas+Neue&display=swap');
 
-/* ===== LIGHT THEME — TACTICAL EMERALD ===== */
+/* Light theme palette */
 :root{
-  --bg:#FCFCFD;          /* page */
-  --card:#FFFFFF;        /* cards */
-  --line:#E5E7EB;        /* subtle borders */
-  --ink:#111827;         /* headings/body */
-  --muted:#6B7280;       /* secondary text */
+  --bg:#FCFCFD;
+  --card:#FFFFFF;
+  --line:#E5E7EB;
+  --ink:#111827;
+  --muted:#6B7280;
 
-  --accent:#0F766E;      /* deep emerald */
-  --accent2:#10B981;     /* bright emerald */
+  --accent:#0F766E;
+  --accent2:#10B981;
 
   --shadow-s:0 6px 18px rgba(17,24,39,.06);
   --shadow-m:0 14px 42px rgba(17,24,39,.08);
-
-  /* HERO IMAGE (SQUAT). Swap this URL if you prefer another image: */
-  --hero-img:url('https://images.unsplash.com/photo-1571019614242-c5c5dee9f50f?auto=format&fit=crop&w=1600&q=80');
-  /* other good options:
-     https://images.unsplash.com/photo-1561214074-2a4f3c02e4e4?auto=format&fit=crop&w=1600&q=80
-     https://images.unsplash.com/photo-1517963879433-6ad3a7b8b3b3?auto=format&fit=crop&w=1600&q=80
-  */
 }
 
 /* Base */
@@ -35,6 +28,7 @@ h2{font-weight:800;font-size:clamp(24px,3vw,34px)}
 h3{font-weight:800;font-size:clamp(18px,2.2vw,20px)}
 .small{font-size:.95rem;color:var(--muted)}
 hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+.grad{background:linear-gradient(180deg,#0F766E,#10B981);-webkit-background-clip:text;background-clip:text;color:transparent}
 
 /* NAV */
 .nav{
@@ -68,28 +62,16 @@ hr{border:0;border-top:1px solid var(--line);margin:26px 0}
   padding:8px 12px;border-radius:999px;font-size:.92rem
 }
 
-/* HERO */
+/* HERO (image comes from inline style in index.html) */
 .hero{margin:24px 0 8px}
-
-/* We paint the image on the hero card itself so it ALWAYS shows */
 .hero-card{
-  position:relative;
   border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow-m);overflow:hidden;
   min-height:520px;
-  /* gradient-to-transparent so text on the LEFT stays crisp, image on the RIGHT shows */
-  background:
-    linear-gradient(90deg, rgba(252,252,253,1) 0%, rgba(252,252,253,.92) 34%, rgba(252,252,253,.55) 52%, rgba(252,252,253,0) 70%),
-    var(--hero-img) center right / cover no-repeat;
 }
-.hero-inner{
-  display:grid;gap:28px;grid-template-columns:1.05fr 1fr;align-items:center;
-  padding:40px 32px 28px
-}
+.hero-inner{display:grid;gap:28px;grid-template-columns:1.05fr 1fr;align-items:center;padding:40px 32px 28px}
 
-/* Location CTA card (right) */
-.cta{
-  background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:var(--shadow-s)
-}
+/* CTA card */
+.cta{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:var(--shadow-s)}
 .cta h3{margin-bottom:4px}
 .cta ul{margin:10px 0 0 18px}
 
