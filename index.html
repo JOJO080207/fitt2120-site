@@ -40,11 +40,15 @@
             <div class="chip">Sauna + Stretch included</div>
           </div>
 
-          <a class="btn btn-lg" href="#" title="Join">Join now</a>
-          <a class="btn btn-outline btn-lg" href="#" title="Day Pass">Grab a Day Pass</a>
+          <!-- wrapped CTAs for better mobile layout -->
+          <p class="fitt-cta-row">
+            <a class="btn btn-lg" href="#" title="Join">Join now</a>
+            <a class="btn btn-outline btn-lg" href="#" title="Day Pass">Grab a Day Pass</a>
+          </p>
         </div>
 
-        <div class="cta">
+        <!-- added fitt-hero-card for mobile stacking/padding -->
+        <div class="cta fitt-hero-card">
           <h3 data-address>Address</h3>
           <p class="small">24/7 member access • Staffed hours posted on site</p>
           <ul>
@@ -64,8 +68,10 @@
 
   <!-- FULL-WIDTH FEATURE IMAGE (SQUAT) DIRECTLY UNDER HERO -->
   <section class="wrap feature">
-    <figure class="feature-card">
+    <!-- added fitt-hero-media + fitt-hero-img to align with content column -->
+    <figure class="feature-card fitt-hero-media">
       <img
+        class="fitt-hero-img"
         src="https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg?auto=compress&cs=tinysrgb&w=2000&q=85"
         alt="Athlete performing a squat"
         loading="eager"
