@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>F.I.T.T 21-20 — 24/7 Gym</title>
-  <link rel="stylesheet" href="styles.css?v=4" />
+  <link rel="stylesheet" href="styles.css?v=5" />
 </head>
 <body>
 
@@ -25,21 +25,9 @@
     </div>
   </div>
 
-  <!-- HERO (image is an <img> so it ALWAYS renders) -->
+  <!-- HERO (copy-only, no background image) -->
   <header class="wrap hero">
     <div class="hero-card">
-      <!-- RIGHT-SIDE IMAGE (change src to any squat you like) -->
-      <img
-        class="hero-img"
-        src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50f?auto=format&fit=crop&w=2000&q=85"
-        alt="Athlete performing a squat"
-        loading="eager"
-        fetchpriority="high"
-      />
-
-      <!-- left-to-right white gradient so text stays readable -->
-      <div class="hero-fade"></div>
-
       <div class="hero-inner">
         <div>
           <h1>ONE PRICE. <span class="grad">24/7</span>. EVERYTHING INCLUDED.</h1>
@@ -73,6 +61,18 @@
       </div>
     </div>
   </header>
+
+  <!-- FULL-WIDTH FEATURE IMAGE (SQUAT) DIRECTLY UNDER HERO -->
+  <section class="wrap feature">
+    <figure class="feature-card">
+      <img
+        src="https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg?auto=compress&cs=tinysrgb&w=2000&q=85"
+        alt="Athlete performing a squat"
+        loading="eager"
+        referrerpolicy="no-referrer"
+      />
+    </figure>
+  </section>
 
   <!-- WHAT'S INSIDE -->
   <section id="inside" class="wrap section">
@@ -154,7 +154,7 @@
   <!-- QR GUIDES -->
   <section class="wrap section">
     <h2><span class="dot"></span> QR Guides</h2>
-    <p>
+    <p class="qr-links">
       <a class="btn btn-outline" href="/sauna-howto.html">Sauna How-To</a>
       <a class="btn btn-outline" href="/pre-lift.html#post-sauna">Post-Sauna Reset (8 min)</a>
       <a class="btn btn-outline" href="/pre-lift.html">Pre-Lift Mobility (5 min)</a>
