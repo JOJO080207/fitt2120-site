@@ -1,48 +1,49 @@
 <!doctype html>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Stretch Routines | F.I.T.T 21-20</title>
-<style>
-  body{margin:0;font:16px/1.6 system-ui;background:#0b0f13;color:#e9eef2}
-  .wrap{max-width:900px;margin:auto;padding:24px}
-  h1{margin:0 0 12px}
-  .card{background:#111720;border:1px solid #1f2a36;border-radius:12px;padding:16px;margin:16px 0}
-  .btn{display:inline-block;margin:6px 8px 0 0;padding:12px 18px;border-radius:10px;text-decoration:none;background:#10b981;color:#04170f;font-weight:700}
-  #t{font-size:2rem;margin-top:8px}
-</style>
-<div class="wrap">
-  <h1>Stretch Routines</h1>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Stretch Routines | F.I.T.T 21-20</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="wrap">
+    <h1>Stretch Routines</h1>
 
-  <div class="card">
-    <h2>Pre-Lift Mobility (5 min)</h2>
-    <ol>
-      <li>Hamstring hinge — <strong>30s/side ×2</strong></li>
-      <li>Calf stretch (knee straight) — <strong>30–45s/side</strong></li>
-      <li>Glute/piriformis — <strong>30–45s/side</strong></li>
-      <li>T-spine opener on bar — <strong>30–45s</strong></li>
-    </ol>
-    <a class="btn" href="#t" onclick="start(300)">Start 5:00 timer</a>
+    <div class="card">
+      <h2>Pre-Lift Mobility (5 min)</h2>
+      <ol>
+        <li>Hamstring hinge — <strong>30s/side ×2</strong></li>
+        <li>Calf stretch (knee straight) — <strong>30–45s/side</strong></li>
+        <li>Glute/piriformis — <strong>30–45s/side</strong></li>
+        <li>T-spine opener on bar — <strong>30–45s</strong></li>
+      </ol>
+      <a class="btn" href="#t" onclick="start(300)">Start 5:00 timer</a>
+    </div>
+
+    <div class="card" id="post-sauna">
+      <h2>Post-Sauna Reset (8 min)</h2>
+      <ol>
+        <li>Hamstring hinge — <strong>45s/side ×2</strong></li>
+        <li>Adductors — <strong>45s/side</strong></li>
+        <li>Glute/piriformis — <strong>45s/side</strong></li>
+        <li>Low-back decompression — <strong>45s ×2</strong></li>
+        <li>Breathing — <strong>4-in/6-out × 6 cycles</strong></li>
+      </ol>
+      <a class="btn" href="#t" onclick="start(480)">Start 8:00 timer</a>
+    </div>
+
+    <p id="t" style="font-size:2rem;margin-top:8px;"></p>
   </div>
 
-  <div class="card" id="post-sauna">
-    <h2>Post-Sauna Reset (8 min)</h2>
-    <ol>
-      <li>Hamstring hinge — <strong>45s/side ×2</strong></li>
-      <li>Adductors — <strong>45s/side</strong></li>
-      <li>Glute/piriformis — <strong>45s/side</strong></li>
-      <li>Low-back decompression — <strong>45s ×2</strong></li>
-      <li>Breathing — <strong>4-in/6-out × 6 cycles</strong></li>
-    </ol>
-    <a class="btn" href="#t" onclick="start(480)">Start 8:00 timer</a>
-  </div>
-
-  <p id="t"></p>
-</div>
-<script>
-function start(s){
-  const el=document.getElementById('t'); clearInterval(window._ti);
-  window._ti=setInterval(()=>{
-    el.textContent=new Date(s--*1000).toISOString().substr(14,5);
-    if(s<0){clearInterval(window._ti); el.textContent="Done — wipe pads.";}
-  },1000);
-}
-</script>
+  <script>
+    function start(s){
+      const el=document.getElementById('t'); clearInterval(window._ti);
+      window._ti=setInterval(()=>{
+        el.textContent=new Date(s--*1000).toISOString().substr(14,5);
+        if(s<0){clearInterval(window._ti); el.textContent="Done — wipe pads.";}
+      },1000);
+    }
+  </script>
+</body>
+</html>
