@@ -3,167 +3,218 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>F.I.T.T 21-20 — One price. 24/7. Everything included.</title>
-  <meta name="description" content="Veteran-owned 24/7 gym. Strength floor, 2 infrared saunas, Technogym Flexability Posterior. One price. All access." />
-  <link rel="stylesheet" href="styles.css?v=13" />
+  <title>F.I.T.T 21-20 — 24/7 Gym</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#fbfcfd;
+      --ink:#0b1727;
+      --muted:#5e6a7a;
+      --pill:#eef2f6;
+      --brand:#2C7A62; /* FITT green */
+      --brand-ink:#103a2f;
+      --cta:#2C7A62;
+      --cta-ink:#ffffff;
+      --outline:#10151c1a;
+      --card:#ffffff;
+      --shadow: 0 8px 28px rgba(11, 23, 39, .10);
+      --radius:16px;
+      --max:1180px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--ink);
+      font:16px/1.6 "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    /* --- NAV --- */
+    .nav{
+      position:sticky; top:0; z-index:10;
+      background:rgba(251,252,253,.9);
+      backdrop-filter:saturate(180%) blur(10px);
+      border-bottom:1px solid #e9eef3;
+    }
+    .nav-inner{
+      max-width:var(--max); margin:0 auto; padding:14px 20px;
+      display:flex; align-items:center; justify-content:space-between;
+      gap:16px;
+    }
+    .brand{display:flex; align-items:baseline; gap:8px; font-weight:900; letter-spacing:.2px}
+    .brand b{font-size:22px}
+    .brand small{font-size:18px; color:var(--brand)}
+
+    .nav-cta{display:flex; gap:12px; align-items:center}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:.5rem; white-space:nowrap; cursor:pointer;
+      padding:12px 18px; border-radius:999px; font-weight:700;
+      border:1px solid transparent; text-decoration:none; user-select:none;
+      transition:transform .06s ease, box-shadow .2s ease, background .2s ease;
+    }
+    .btn:hover{transform:translateY(-1px)}
+    .btn:active{transform:translateY(0)}
+    .btn--solid{background:var(--cta); color:var(--cta-ink); box-shadow:0 6px 16px rgba(44,122,98,.25)}
+    .btn--outline{background:#fff; color:var(--ink); border-color:#d7dee6}
+
+    /* --- LAYOUT --- */
+    .wrap{max-width:var(--max); margin:0 auto; padding:28px 20px 64px}
+
+    .hero{
+      display:grid; grid-template-columns: 1.2fr .9fr; gap:36px;
+      align-items:start; margin-top:18px;
+    }
+    .h1{
+      font-weight:900; font-size:clamp(40px, 6vw, 80px); line-height:.95;
+      letter-spacing:-1px; margin:8px 0 10px;
+    }
+    .h1 .accent{color:var(--brand)}
+    .sub{color:var(--muted); margin:14px 0 2px}
+    .chips{display:flex; flex-wrap:wrap; gap:10px; margin:14px 0 18px}
+    .chip{
+      background:var(--pill); color:var(--ink);
+      border:1px solid #e6ebf1; padding:10px 14px; border-radius:999px; font-weight:600; font-size:14px;
+    }
+    .actions{display:flex; gap:14px; margin:10px 0 0}
+    .btn--big{padding:14px 22px; font-size:16px}
+
+    .card{
+      background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow);
+      border:1px solid var(--outline);
+      padding:20px; position:relative;
+    }
+    .card h3{margin:0 0 12px; font-size:22px}
+    .list{margin:10px 0 16px; padding-left:20px}
+    .list li{margin:6px 0}
+
+    /* HERO PHOTO — slight right offset like the version you liked */
+    .hero-photo{
+      margin:28px clamp(16px, 5vw, 64px) 18px clamp(120px, 17vw, 220px);
+      border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow);
+      border:1px solid var(--outline);
+    }
+    .hero-photo img{display:block; width:min(1100px, 95vw); height:auto}
+
+    /* --- WHAT'S INSIDE --- */
+    .section-title{font-size:34px; font-weight:900; letter-spacing:-.5px; margin:14px 0 18px}
+    .cards{display:grid; grid-template-columns:repeat(3, 1fr); gap:18px}
+    .info-card{
+      background:#fff; border:1px solid var(--outline); border-radius:14px; box-shadow:var(--shadow);
+      padding:18px;
+    }
+    .info-card h4{margin:0 0 8px; font-size:20px}
+    .muted{color:var(--muted)}
+
+    /* --- FOOTER --- */
+    .foot{border-top:1px solid #eaeef3; margin-top:64px; color:var(--muted)}
+    .foot-inner{max-width:var(--max); margin:0 auto; padding:20px}
+
+    /* --- RESPONSIVE --- */
+    @media (max-width: 980px){
+      .hero{grid-template-columns:1fr; gap:20px}
+      .card{order:2}
+      .hero-left{order:1}
+      /* photo becomes centered and full width on mobile */
+      .hero-photo{margin:20px auto 16px; width:100%; border-radius:14px}
+      .hero-photo img{width:100%}
+      .cards{grid-template-columns:1fr}
+    }
+    @media (max-width: 600px){
+      .btn--big{width:100%}
+      .actions{flex-direction:column}
+      .section-title{font-size:28px}
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Top Nav -->
-  <header class="top">
-    <div class="wrap nav">
-      <a class="brand" href="#">F.I.T.T <span>21-20</span></a>
-
-      <nav class="mainnav">
-        <a href="#inside">Inside</a>
-        <a href="#how">How it works</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#location">Location</a>
+  <!-- NAV -->
+  <header class="nav">
+    <div class="nav-inner">
+      <div class="brand"><b>F.I.T.T</b><small>21-20</small></div>
+      <nav class="nav-cta">
+        <a class="btn btn--solid" href="#">Join $69/mo</a>
+        <a class="btn btn--outline" href="#">Day Pass $15</a>
       </nav>
-
-      <div class="top-ctas">
-        <a class="btn btn-primary" href="#join">Join $69/mo</a>
-        <a class="btn btn-outline" href="#daypass">Day Pass $15</a>
-      </div>
     </div>
   </header>
 
-  <main>
-
+  <main class="wrap">
     <!-- HERO -->
-    <section class="hero" id="home">
-      <div class="wrap grid-hero">
-        <div class="hero-copy">
-          <h1>
-            ONE PRICE. <span class="accent">24/7.</span><br/>
-            EVERYTHING<br/> INCLUDED.
-          </h1>
+    <section class="hero">
+      <div class="hero-left">
+        <h1 class="h1">
+          ONE PRICE. <span class="accent">24/7.</span><br/>
+          EVERYTHING<br/>INCLUDED.
+        </h1>
 
-          <p class="features-inline">
-            Strength floor • 2 Infrared Saunas • Technogym Flexability Posterior
-          </p>
+        <p class="sub">Strength floor • 2 Infrared Saunas • Technogym Flexibility Posterior</p>
 
-          <div class="pills">
-            <span class="pill">Veteran owned</span>
-            <span class="pill">App entry</span>
-            <span class="pill">Sauna + Stretch included</span>
-          </div>
-
-          <div class="cta-row">
-            <a id="join" class="btn btn-primary" href="#">Join now</a>
-            <a id="daypass" class="btn btn-soft" href="#">Grab a Day Pass</a>
-          </div>
+        <div class="chips">
+          <span class="chip">Veteran owned</span>
+          <span class="chip">App entry</span>
+          <span class="chip">Sauna + Stretch included</span>
         </div>
 
-        <!-- Right feature card -->
-        <aside class="feature-card" id="location">
-          <h3>5047 Parham Rd</h3>
-          <p class="muted">24/7 member access • Staffed hours posted on site</p>
-          <ul class="checks">
-            <li>Secure, app-based door access</li>
-            <li>Full strength floor + cardio</li>
-            <li>2× Infrared saunas included</li>
-            <li>Technogym Flexability station</li>
-          </ul>
-          <div class="card-ctas">
-            <a class="btn btn-primary" href="#">Start Membership</a>
-            <a class="btn btn-outline" href="#">Day Pass</a>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <!-- BIG IMAGE – aligned to content edges -->
-    <section class="feature edge" aria-label="Gym action photo">
-      <figure class="feature-media">
-        <img
-          src="https://images.unsplash.com/photo-1549049950-48d5887197a3?auto=format&fit=crop&w=1920&q=80"
-          alt="Athlete setting up for a squat on platform"
-          loading="lazy"
-        />
-      </figure>
-    </section>
-
-    <!-- INSIDE -->
-    <section id="inside" class="inside">
-      <div class="wrap">
-        <h2>What’s inside</h2>
-
-        <div class="cards">
-          <article class="card">
-            <div class="icon">🏋️‍♂️</div>
-            <h3>Strength</h3>
-            <p>Two half racks on 8’×8’ platforms, Smith, DAP, leg press/hack. Dumbbells 5–100 lb, Olympic bars & plates.</p>
-          </article>
-
-          <article class="card">
-            <div class="icon">🔥</div>
-            <h3>Infrared Saunas</h3>
-            <p>Two IR saunas (15–20 min). Hydrate, recover faster, then hit our 8-min Post-Sauna Reset.</p>
-          </article>
-
-          <article class="card">
-            <div class="icon">🧘</div>
-            <h3>Technogym Stretch</h3>
-            <p>Self-guided mobility on the Flexability Posterior: quick Pre-Lift and Low-Back routines.</p>
-          </article>
+        <div class="actions">
+          <a class="btn btn--solid btn--big" href="#">Join now</a>
+          <a class="btn btn--outline btn--big" href="#">Grab a Day Pass</a>
         </div>
       </div>
-    </section>
 
-    <!-- HOW (placeholder anchors, copy later if you want) -->
-    <section id="how" class="how">
-      <div class="wrap">
-        <h2>How it works</h2>
-        <ol class="steps">
-          <li><strong>Join online</strong> — pick All-Access or a Day Pass. No contracts talk, just value.</li>
-          <li><strong>App unlock</strong> — your phone becomes the key. 24/7 access.</li>
-          <li><strong>Train</strong> — lift, sauna, stretch. Everything included.</li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- PRICING -->
-    <section id="pricing" class="pricing">
-      <div class="wrap">
-        <h2>Pricing</h2>
-        <div class="price-grid">
-          <div class="price">
-            <h3>All-Access</h3>
-            <div class="amount">$69<span>/mo</span></div>
-            <ul>
-              <li>24/7 entry (app)</li>
-              <li>Strength + cardio</li>
-              <li>2× Infrared saunas</li>
-              <li>Technogym stretch station</li>
-            </ul>
-            <a class="btn btn-primary" href="#">Start Membership</a>
-          </div>
-
-          <div class="price">
-            <h3>Day Pass</h3>
-            <div class="amount">$15</div>
-            <ul>
-              <li>Same-day access</li>
-              <li>All areas included</li>
-            </ul>
-            <a class="btn btn-outline" href="#">Grab a Day Pass</a>
-          </div>
+      <aside class="card">
+        <h3>5047 Parham Rd</h3>
+        <p class="muted" style="margin:0 0 6px">24/7 member access • Staffed hours posted on site</p>
+        <ul class="list">
+          <li>Secure, app-based door access</li>
+          <li>Full strength floor + cardio</li>
+          <li>2× Infrared saunas included</li>
+          <li>Technogym Flexibility station</li>
+        </ul>
+        <div class="actions" style="margin-top:8px">
+          <a class="btn btn--solid" href="#">Start Membership</a>
+          <a class="btn btn--outline" href="#">Day Pass</a>
         </div>
-      </div>
+      </aside>
     </section>
 
+    <!-- HERO PHOTO (kept slightly right-offset like before) -->
+    <figure class="hero-photo">
+      <img
+        src="https://images.unsplash.com/photo-1544244010-8c3d2e5f1b49?auto=format&fit=crop&w=1600&q=80"
+        alt="Athlete setting up for a squat on platform">
+    </figure>
+
+    <!-- WHAT’S INSIDE -->
+    <h2 class="section-title">What’s inside</h2>
+    <section class="cards">
+      <article class="info-card">
+        <h4>Strength</h4>
+        <p class="muted">Two half racks on 8’×8’ platforms, Smith, DAP, leg press/hack. DBs 5–100 lb, Olympic bars & plates.</p>
+      </article>
+
+      <article class="info-card">
+        <h4>Infrared Saunas</h4>
+        <p class="muted">Two IR saunas (15–20 min). Hydrate, recover faster, then hit our 8-min Post-Sauna Reset.</p>
+      </article>
+
+      <article class="info-card">
+        <h4>Technogym Stretch</h4>
+        <p class="muted">Self-guided mobility on the Flexibility Posterior: quick Pre-Lift and Low-Back routines.</p>
+      </article>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="foot">
+      <div class="foot-inner">
+        <small>© F.I.T.T 21-20. Simple, 24/7 access. Contact: info@j3lfamily.com</small>
+      </div>
+    </footer>
   </main>
-
-  <footer class="foot">
-    <div class="wrap">
-      <p>© <span id="y"></span> F.I.T.T 21-20 • Veteran owned • Grovetown, GA • info@j3lfamily.com</p>
-    </div>
-  </footer>
-
-  <script>
-    // tiny year helper
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
