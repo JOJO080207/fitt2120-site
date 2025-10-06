@@ -1,4 +1,3 @@
-/* FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Bebas+Neue&display=swap');
 
 /* THEME */
@@ -14,7 +13,7 @@
   --shadow-m:0 14px 42px rgba(17,24,39,.08);
 }
 
-/* RESET / BASE */
+/* BASE */
 *{box-sizing:border-box}
 html,body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,-apple-system,Segoe UI,Roboto}
 img{max-width:100%;display:block}
@@ -26,17 +25,13 @@ h1{font-family:"Bebas Neue",Inter,sans-serif;letter-spacing:.4px;font-size:clamp
 h2{font-weight:800;font-size:clamp(24px,3vw,34px)}
 h3{font-weight:800;font-size:clamp(18px,2.2vw,20px)}
 .small{font-size:.95rem;color:var(--muted)}
-hr{border:0;border-top:1px solid var(--line);margin:26px 0}
 .grad{background:linear-gradient(180deg,#0F766E,#10B981);-webkit-background-clip:text;background-clip:text;color:transparent}
 
 /* NAV */
-.nav{
-  position:sticky;top:0;z-index:50;background:rgba(255,255,255,.82);
-  backdrop-filter:blur(8px);border-bottom:1px solid var(--line)
-}
+.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.82);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
 .brand{font-family:"Bebas Neue",Inter,sans-serif;font-size:30px;letter-spacing:.4px}
-.nav .links a{margin-right:18px;color:#374151;white-space:nowrap}
+.nav .links a{margin-right:18px;color:#374151}
 .nav .actions a{margin-left:10px}
 
 /* BUTTONS */
@@ -64,19 +59,20 @@ hr{border:0;border-top:1px solid var(--line);margin:26px 0}
 /* HERO */
 .hero{margin:24px 0 8px}
 .hero-card{border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow-m);background:#fff}
-.hero-inner{
-  display:grid;gap:28px;grid-template-columns:1.05fr 1fr;align-items:center;
-  padding:40px 32px 28px
-}
+.hero-inner{display:grid;gap:28px;grid-template-columns:1.05fr 1fr;align-items:center;padding:40px 32px 28px}
 .cta{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:var(--shadow-s)}
 .cta h3{margin-bottom:4px}
 .cta ul{margin:10px 0 0 18px}
 
 /* FEATURE IMAGE under hero */
 .feature{margin-top:18px}
-/* <figure> has default margins — kill them so it lines up perfectly with the wrap */
 .feature-card{margin:0;border:1px solid var(--line);border-radius:26px;overflow:hidden;background:#fff;box-shadow:var(--shadow-m)}
-.feature-card img{width:100%;height:520px;object-fit:cover}
+/* use aspect-ratio (with object-fit) for consistent sizing; aligns perfectly with wrap */
+.feature-card img{
+  width:100%;
+  aspect-ratio:16/9;
+  object-fit:cover;
+}
 
 /* SECTIONS & CARDS */
 .section{margin:42px 0}
@@ -97,8 +93,7 @@ hr{border:0;border-top:1px solid var(--line);margin:26px 0}
 .check{color:#16a34a;font-weight:800;margin-right:8px}
 
 /* QR links */
-.qr-links .btn,
-.qr-links .btn-outline{margin-right:8px;margin-bottom:8px}
+.qr-links .btn,.qr-links .btn-outline{margin-right:8px;margin-bottom:8px}
 
 /* MAP */
 .map{border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow-s)}
@@ -107,36 +102,25 @@ hr{border:0;border-top:1px solid var(--line);margin:26px 0}
 /* FOOTER */
 footer{color:var(--muted);border-top:1px solid var(--line);margin-top:48px;padding:18px 0}
 
-/* --------- RESPONSIVE POLISH ---------- */
-
-/* Tablet */
+/* RESPONSIVE */
 @media (max-width:980px){
-  .nav .links{display:none} /* keep header clean */
+  .nav .links{display:none}
   .nav .actions .btn{padding:10px 14px}
   .hero-inner{grid-template-columns:1fr;padding:28px}
-  .feature-card img{height:360px}
 }
-
-/* Mobile: stack buttons, tighten chips, narrower grid, smaller icons */
 @media (max-width:680px){
   .wrap{padding:0 18px}
   .chips{gap:8px}
   .chip{font-size:.88rem;padding:7px 10px}
   .grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
   .icon{width:48px;height:48px}
-  .feature-card img{height:300px}
   .cta{padding:16px}
 }
-
-/* Small phones: full-width hero buttons & spacing tidy */
 @media (max-width:540px){
   .hero-inner .btn-lg{width:100%;margin:0 0 10px}
   .hero-inner .btn-lg + .btn-lg{margin-top:0}
   .price .big{font-size:40px}
-  .feature-card img{height:260px}
 }
-
-/* Ultra-small tweaks */
 @media (max-width:400px){
   .brand{font-size:26px}
   .cta ul{margin-left:16px}
