@@ -1,13 +1,28 @@
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Bebas+Neue&display=swap');
 
+/* ===== THEME: HEAT (OTF-style orange energy) ===== */
 :root{
-  --bg:#0a0f14; --panel:#0d141b; --panel2:#101923; --line:#1b2a36;
-  --ink:#e9eef2; --muted:#9fb2c0; --accent:#10b981; --accent2:#0ea36d; --inkdark:#06110c;
+  --bg:#0b0a08;
+  --panel:#11100d;
+  --panel2:#15130f;
+  --line:#2a2018;
+
+  --ink:#f6f5f2;
+  --muted:#c8bfb4;
+
+  /* punchy orange gradient */
+  --accent:#ff7a18;   /* bright amber */
+  --accent2:#ff3d00;  /* deep orange */
+  --inkdark:#1a0e05;
+
   --shadow:0 14px 46px rgba(0,0,0,.45);
-  --hero-img:url('https://images.unsplash.com/photo-1517960413843-0aee8e2b3285?auto=format&fit=crop&w=1600&q=80');
+
+  /* warm, high-energy hero image */
+  --hero-img:url('https://images.unsplash.com/photo-1558611848-73f7eb4001e3?auto=format&fit=crop&w=1600&q=80');
 }
 
+/* Base */
 *{box-sizing:border-box}
 html,body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Inter,system-ui,-apple-system,Segoe UI,Roboto}
 a{color:inherit;text-decoration:none}
@@ -15,7 +30,11 @@ a{color:inherit;text-decoration:none}
 
 h1,h2,h3{line-height:1.1;margin:0 0 14px}
 h1{font-family:"Bebas Neue",Inter,sans-serif;letter-spacing:.5px;font-size:clamp(52px,8vw,92px)}
-h1 span{color:var(--accent)}
+h1 .glow{
+  background:linear-gradient(180deg,var(--accent),var(--accent2));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  text-shadow:0 8px 30px rgba(255,61,0,.25);
+}
 h2{font-weight:800;font-size:clamp(24px,3.2vw,34px)}
 h3{font-weight:800;font-size:clamp(18px,2.4vw,22px)}
 .small{font-size:.92rem;color:var(--muted)}
@@ -23,12 +42,11 @@ hr{border:0;border-top:1px solid var(--line);margin:26px 0}
 
 /* NAV */
 .nav{
-  position:sticky;top:0;z-index:50;background:rgba(10,15,20,.65);
-  backdrop-filter:blur(8px);border-bottom:1px solid rgba(27,42,54,.6)
+  position:sticky;top:0;z-index:50;background:rgba(11,10,8,.7);
+  backdrop-filter:blur(8px);border-bottom:1px solid rgba(42,32,24,.6)
 }
 .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
 .brand{font-family:"Bebas Neue",Inter,sans-serif;font-size:30px;letter-spacing:.5px}
-.brand span{color:var(--accent)}
 .nav .links a{margin-right:16px;color:var(--muted)}
 .nav .actions a{margin-left:10px}
 
@@ -36,20 +54,24 @@ hr{border:0;border-top:1px solid var(--line);margin:26px 0}
 .hero{margin:22px 0 8px;border-radius:28px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow)}
 .hero-visual{
   background:
-    linear-gradient(180deg,rgba(10,15,20,.1) 0%, rgba(10,15,20,.65) 100%),
+    linear-gradient(180deg,rgba(11,10,8,.1) 0%, rgba(11,10,8,.65) 100%),
     var(--hero-img);
   background-size:cover;background-position:center;
   min-height:440px;
 }
 .hero-inner{display:grid;gap:28px;grid-template-columns:1.25fr 1fr;align-items:center;padding:36px 28px}
-.hero h1{margin-bottom:6px}
 .badges{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0 18px}
-.badge{font-weight:700;background:rgba(16,185,129,.14);border:1px solid rgba(16,185,129,.35);
-  color:#c6ffee;padding:8px 12px;border-radius:999px;font-size:.92rem}
+.badge{
+  font-weight:700;
+  background:rgba(255,122,24,.16);
+  border:1px solid rgba(255,122,24,.38);
+  color:#ffe5d2;
+  padding:8px 12px;border-radius:999px;font-size:.92rem
+}
 
 /* CTA card (glass) */
 .cta-card{
-  background:rgba(16,24,32,.75);backdrop-filter:blur(10px);
+  background:rgba(20,16,12,.75);backdrop-filter:blur(10px);
   border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:var(--shadow)
 }
 .cta-card h3{margin-bottom:4px}
@@ -69,14 +91,15 @@ hr{border:0;border-top:1px solid var(--line);margin:26px 0}
 /* Sections & cards */
 .section{margin:40px 0}
 .section h2{display:flex;align-items:center;gap:10px}
-.underline{height:10px;width:44px;border-radius:8px;background:var(--accent);display:inline-block}
+.underline{height:10px;width:44px;border-radius:8px;background:linear-gradient(90deg,var(--accent),var(--accent2));display:inline-block}
 
 .grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
 .card{background:var(--panel2);border:1px solid var(--line);border-radius:18px;padding:18px}
 .icon{
   width:54px;height:54px;border-radius:12px;display:inline-grid;place-items:center;
-  background:rgba(16,185,129,.12);border:1px solid rgba(16,185,129,.3);font-size:26px;margin-bottom:10px
+  background:rgba(255,122,24,.12);border:1px solid rgba(255,122,24,.3);margin-bottom:10px
 }
+.icon svg{width:28px;height:28px;fill:#ffb38a}
 
 /* Pricing */
 .price{background:var(--panel2);border:1px solid var(--line);border-radius:22px;padding:24px}
