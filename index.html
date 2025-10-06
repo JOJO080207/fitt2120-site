@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>F.I.T.T 21-20 — 24/7 Gym</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=2">
 </head>
 <body>
 
@@ -25,7 +25,7 @@
     </div>
   </div>
 
-  <!-- HERO -->
+  <!-- HERO (image is painted on this card via CSS) -->
   <header class="wrap hero">
     <div class="hero-card">
       <div class="hero-inner">
@@ -59,8 +59,6 @@
           </p>
         </div>
       </div>
-
-      <div class="hero-visual"></div>
     </div>
   </header>
 
@@ -70,7 +68,6 @@
     <div class="grid">
       <div class="card">
         <div class="icon">
-          <!-- Dumbbell (stroke icon) -->
           <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="9" width="2" height="6"/><rect x="7" y="7" width="2" height="10"/><rect x="15" y="7" width="2" height="10"/><rect x="19" y="9" width="2" height="6"/><rect x="9" y="11" width="6" height="2"/></svg>
         </div>
         <h3>Strength</h3>
@@ -79,7 +76,6 @@
 
       <div class="card">
         <div class="icon">
-          <!-- Flame -->
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2c1 4-3 5-3 8 0 2 2 3 2 5 0 2-1 3-1 3a5 5 0 0 0 10-2c0-6-6-7-8-14Z"/></svg>
         </div>
         <h3>Infrared Saunas</h3>
@@ -88,7 +84,6 @@
 
       <div class="card">
         <div class="icon">
-          <!-- Stretch/Yoga -->
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="6" r="2"/><path d="M9 12h3l2 3 3 1v2l-4-1-2 3H9l2-4-3-4Z"/></svg>
         </div>
         <h3>Technogym Stretch</h3>
@@ -170,14 +165,6 @@
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section class="wrap section">
-    <h2><span class="dot"></span> FAQ</h2>
-    <details><summary>Do the saunas cost extra?</summary><p>No — sauna access is included in All-Access.</p></details>
-    <details><summary>How do I get in 24/7?</summary><p>After joining, you’ll receive app-based door access. It’s instant once your account is active.</p></details>
-    <details><summary>Can I cancel anytime?</summary><p>Yes. No contracts. Manage it online.</p></details>
-  </section>
-
   <footer class="wrap">
     <p>© F.I.T.T 21-20 • Retired Sergeants Major • No fluff. Train hard. Recover smart.</p>
   </footer>
@@ -185,11 +172,7 @@
   <!-- ===== ONE-PLACE ADDRESS CONFIG ===== -->
   <script>
     const ADDRESS = "5047 Parham Rd"; // <-- change this later if you move
-
-    // Put address everywhere we tagged
     document.querySelectorAll('[data-address]').forEach(el => el.textContent = ADDRESS);
-
-    // Build Google Maps embed
     const map = document.getElementById('map-iframe');
     map.src = "https://www.google.com/maps?q=" + encodeURIComponent(ADDRESS) + "&output=embed";
   </script>
