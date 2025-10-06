@@ -1,25 +1,32 @@
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Bebas+Neue&display=swap');
 
-/* ===== THEME: HEAT (OTF-style orange energy) ===== */
+/* ===== THEME: TACTICAL EMERALD ===== */
 :root{
-  --bg:#0b0a08;
-  --panel:#11100d;
-  --panel2:#15130f;
-  --line:#2a2018;
+  /* Deep charcoal stack */
+  --bg:#0a0f12;
+  --panel:#0f151c;
+  --panel2:#111b24;
+  --line:#1c2a36;
 
-  --ink:#f6f5f2;
-  --muted:#c8bfb4;
+  /* Text */
+  --ink:#e9eef2;
+  --muted:#9fb2c0;
 
-  /* punchy orange gradient */
-  --accent:#ff7a18;   /* bright amber */
-  --accent2:#ff3d00;  /* deep orange */
-  --inkdark:#1a0e05;
+  /* Emerald gradient punch */
+  --accent:#10b981;     /* emerald */
+  --accent2:#22d3ee;    /* mint-cyan edge */
+  --inkdark:#04120c;
 
   --shadow:0 14px 46px rgba(0,0,0,.45);
 
-  /* warm, high-energy hero image */
-  --hero-img:url('https://images.unsplash.com/photo-1558611848-73f7eb4001e3?auto=format&fit=crop&w=1600&q=80');
+  /* --- HERO IMAGE (BARBELL SQUAT) --- */
+  /* Swap this URL if you want — just keep the format parameters. */
+  --hero-img:url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1600&q=80');
+  /* alt options you can try:
+     https://images.unsplash.com/photo-1571019614242-c5c5dee9f50f?auto=format&fit=crop&w=1600&q=80
+     https://images.unsplash.com/photo-1561214074-2a4f3c02e4e4?auto=format&fit=crop&w=1600&q=80
+  */
 }
 
 /* Base */
@@ -29,11 +36,11 @@ a{color:inherit;text-decoration:none}
 .wrap{max-width:1200px;margin:0 auto;padding:0 28px}
 
 h1,h2,h3{line-height:1.1;margin:0 0 14px}
-h1{font-family:"Bebas Neue",Inter,sans-serif;letter-spacing:.5px;font-size:clamp(52px,8vw,92px)}
+h1{font-family:"Bebas Neue",Inter,sans-serif;letter-spacing:.5px;font-size:clamp(50px,8vw,92px)}
 h1 .glow{
   background:linear-gradient(180deg,var(--accent),var(--accent2));
   -webkit-background-clip:text;background-clip:text;color:transparent;
-  text-shadow:0 8px 30px rgba(255,61,0,.25);
+  text-shadow:0 10px 38px rgba(34,211,238,.18);
 }
 h2{font-weight:800;font-size:clamp(24px,3.2vw,34px)}
 h3{font-weight:800;font-size:clamp(18px,2.4vw,22px)}
@@ -42,42 +49,15 @@ hr{border:0;border-top:1px solid var(--line);margin:26px 0}
 
 /* NAV */
 .nav{
-  position:sticky;top:0;z-index:50;background:rgba(11,10,8,.7);
-  backdrop-filter:blur(8px);border-bottom:1px solid rgba(42,32,24,.6)
+  position:sticky;top:0;z-index:50;background:rgba(10,15,18,.70);
+  backdrop-filter:blur(8px);border-bottom:1px solid rgba(28,42,54,.65)
 }
 .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
 .brand{font-family:"Bebas Neue",Inter,sans-serif;font-size:30px;letter-spacing:.5px}
 .nav .links a{margin-right:16px;color:var(--muted)}
 .nav .actions a{margin-left:10px}
 
-/* HERO */
-.hero{margin:22px 0 8px;border-radius:28px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow)}
-.hero-visual{
-  background:
-    linear-gradient(180deg,rgba(11,10,8,.1) 0%, rgba(11,10,8,.65) 100%),
-    var(--hero-img);
-  background-size:cover;background-position:center;
-  min-height:440px;
-}
-.hero-inner{display:grid;gap:28px;grid-template-columns:1.25fr 1fr;align-items:center;padding:36px 28px}
-.badges{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0 18px}
-.badge{
-  font-weight:700;
-  background:rgba(255,122,24,.16);
-  border:1px solid rgba(255,122,24,.38);
-  color:#ffe5d2;
-  padding:8px 12px;border-radius:999px;font-size:.92rem
-}
-
-/* CTA card (glass) */
-.cta-card{
-  background:rgba(20,16,12,.75);backdrop-filter:blur(10px);
-  border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:var(--shadow)
-}
-.cta-card h3{margin-bottom:4px}
-.cta-card ul{margin:8px 0 0 18px}
-
-/* Buttons */
+/* BUTTONS */
 .btn{
   display:inline-block;background:linear-gradient(90deg,var(--accent),var(--accent2));color:var(--inkdark);
   padding:12px 18px;border-radius:14px;font-weight:800;text-decoration:none;
@@ -88,6 +68,33 @@ hr{border:0;border-top:1px solid var(--line);margin:26px 0}
 .btn.ghost{background:transparent;color:var(--ink);outline:2px solid var(--ink);box-shadow:none}
 .btn-lg{padding:14px 22px;border-radius:16px}
 
+/* HERO */
+.hero{margin:22px 0 8px;border-radius:28px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow)}
+.hero-inner{display:grid;gap:28px;grid-template-columns:1.25fr 1fr;align-items:center;padding:36px 28px}
+.hero-visual{
+  position:relative;min-height:440px;
+  background:
+    linear-gradient(180deg,rgba(10,15,18,.05) 0%, rgba(10,15,18,.60) 100%),
+    var(--hero-img);
+  background-size:cover;background-position:center;
+}
+.badges{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0 18px}
+.badge{
+  font-weight:700;
+  background:rgba(16,185,129,.14);
+  border:1px solid rgba(16,185,129,.38);
+  color:#d3fff1;
+  padding:8px 12px;border-radius:999px;font-size:.92rem
+}
+
+/* CTA card (glass) */
+.cta-card{
+  background:rgba(16,24,32,.72);backdrop-filter:blur(10px);
+  border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:var(--shadow)
+}
+.cta-card h3{margin-bottom:4px}
+.cta-card ul{margin:8px 0 0 18px}
+
 /* Sections & cards */
 .section{margin:40px 0}
 .section h2{display:flex;align-items:center;gap:10px}
@@ -97,9 +104,9 @@ hr{border:0;border-top:1px solid var(--line);margin:26px 0}
 .card{background:var(--panel2);border:1px solid var(--line);border-radius:18px;padding:18px}
 .icon{
   width:54px;height:54px;border-radius:12px;display:inline-grid;place-items:center;
-  background:rgba(255,122,24,.12);border:1px solid rgba(255,122,24,.3);margin-bottom:10px
+  background:rgba(16,185,129,.12);border:1px solid rgba(16,185,129,.30);margin-bottom:10px
 }
-.icon svg{width:28px;height:28px;fill:#ffb38a}
+.icon svg{width:28px;height:28px;fill:#7ff9cf}
 
 /* Pricing */
 .price{background:var(--panel2);border:1px solid var(--line);border-radius:22px;padding:24px}
