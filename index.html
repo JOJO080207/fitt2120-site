@@ -41,8 +41,9 @@
         <a class="btn btn-lg ghost" href="#" title="Day Pass">Grab a Day Pass</a>
       </div>
 
+      <!-- CTA CARD -->
       <div class="cta-card">
-        <h3>Grovetown, GA</h3>
+        <h3 data-address>Address</h3>
         <p class="small">24/7 member access • Staffed hours posted on site</p>
         <ul>
           <li>✔ Secure, app-based door access</li>
@@ -147,18 +148,16 @@
     <h2><span class="underline"></span> Location & hours</h2>
     <div class="grid">
       <div class="card">
-        <h3>Grovetown, GA</h3>
+        <h3 data-address>Address</h3>
         <p class="small">24/7 member access • Staffed hours posted on site</p>
         <p>Email: <a href="mailto:info@j3lfamily.com">info@j3lfamily.com</a></p>
       </div>
       <div class="map">
-        <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-          src="https://www.google.com/maps?q=Grovetown,GA&output=embed"></iframe>
+        <iframe id="map-iframe" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src=""></iframe>
       </div>
     </div>
   </section>
 
-  <!-- FAQ -->
   <section class="wrap section">
     <h2><span class="underline"></span> FAQ</h2>
     <details><summary>Do the saunas cost extra?</summary><p>No—sauna access is included in All-Access.</p></details>
@@ -170,5 +169,17 @@
     <p>© F.I.T.T 21-20 • Retired Sergeants Major • No fluff. Train hard. Recover smart.</p>
   </footer>
 
+  <!-- ===== ONE-PLACE CONFIG =====
+       Update this ADDRESS and the whole site will reflect it (CTA + Map). -->
+  <script>
+    const ADDRESS = "5047 Parham Rd";  // <- change here later if needed
+
+    // Write address text wherever data-address is present
+    document.querySelectorAll('[data-address]').forEach(el => el.textContent = ADDRESS);
+
+    // Build Google Maps embed from address
+    const map = document.getElementById('map-iframe');
+    map.src = "https://www.google.com/maps?q=" + encodeURIComponent(ADDRESS) + "&output=embed";
+  </script>
 </body>
 </html>
