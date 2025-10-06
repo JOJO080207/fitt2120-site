@@ -4,8 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>F.I.T.T 21-20 — 24/7 Gym</title>
-  <!-- cache-buster so you see the latest styles -->
-  <link rel="stylesheet" href="styles.css?v=3" />
+  <link rel="stylesheet" href="styles.css?v=4" />
 </head>
 <body>
 
@@ -26,18 +25,21 @@
     </div>
   </div>
 
-  <!-- HERO
-       The squat photo is forced inline here so it ALWAYS shows (beats any cached CSS).
-       Swap the URL if you want a different squat image.
-  -->
+  <!-- HERO (image is an <img> so it ALWAYS renders) -->
   <header class="wrap hero">
-    <div
-      class="hero-card"
-      style="background:
-        linear-gradient(90deg, rgba(252,252,253,1) 0%, rgba(252,252,253,.92) 34%, rgba(252,252,253,.55) 52%, rgba(252,252,253,0) 70%),
-        url('https://images.unsplash.com/photo-1571019614242-c5c5dee9f50f?auto=format&fit=crop&w=1800&q=80')
-        center right / cover no-repeat;"
-    >
+    <div class="hero-card">
+      <!-- RIGHT-SIDE IMAGE (change src to any squat you like) -->
+      <img
+        class="hero-img"
+        src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50f?auto=format&fit=crop&w=2000&q=85"
+        alt="Athlete performing a squat"
+        loading="eager"
+        fetchpriority="high"
+      />
+
+      <!-- left-to-right white gradient so text stays readable -->
+      <div class="hero-fade"></div>
+
       <div class="hero-inner">
         <div>
           <h1>ONE PRICE. <span class="grad">24/7</span>. EVERYTHING INCLUDED.</h1>
@@ -181,7 +183,7 @@
 
   <!-- ONE-LINE ADDRESS CONFIG -->
   <script>
-    const ADDRESS = "5047 Parham Rd"; // change later if needed
+    const ADDRESS = "5047 Parham Rd";
     document.querySelectorAll('[data-address]').forEach(el => el.textContent = ADDRESS);
     document.getElementById('map-iframe').src =
       "https://www.google.com/maps?q=" + encodeURIComponent(ADDRESS) + "&output=embed";
