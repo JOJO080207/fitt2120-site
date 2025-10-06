@@ -1,24 +1,23 @@
-/* Fonts */
+/* FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Bebas+Neue&display=swap');
 
-/* Light theme palette */
+/* THEME */
 :root{
   --bg:#FCFCFD;
   --card:#FFFFFF;
   --line:#E5E7EB;
   --ink:#111827;
   --muted:#6B7280;
-
   --accent:#0F766E;
   --accent2:#10B981;
-
   --shadow-s:0 6px 18px rgba(17,24,39,.06);
   --shadow-m:0 14px 42px rgba(17,24,39,.08);
 }
 
-/* Base */
+/* RESET / BASE */
 *{box-sizing:border-box}
 html,body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,-apple-system,Segoe UI,Roboto}
+img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 .wrap{max-width:1200px;margin:0 auto;padding:0 28px}
 
@@ -35,12 +34,12 @@ hr{border:0;border-top:1px solid var(--line);margin:26px 0}
   position:sticky;top:0;z-index:50;background:rgba(255,255,255,.82);
   backdrop-filter:blur(8px);border-bottom:1px solid var(--line)
 }
-.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
 .brand{font-family:"Bebas Neue",Inter,sans-serif;font-size:30px;letter-spacing:.4px}
 .nav .links a{margin-right:18px;color:#374151;white-space:nowrap}
 .nav .actions a{margin-left:10px}
 
-/* Buttons */
+/* BUTTONS */
 .btn{
   display:inline-block;background:linear-gradient(90deg,var(--accent),var(--accent2));color:#ECFDF5;
   padding:12px 18px;border-radius:14px;font-weight:800;box-shadow:var(--shadow-m);
@@ -55,7 +54,7 @@ hr{border:0;border-top:1px solid var(--line);margin:26px 0}
 .btn-outline:hover{transform:translateY(-1px)}
 .btn-lg{padding:14px 22px;border-radius:16px}
 
-/* Chips */
+/* CHIPS */
 .chips{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0 18px}
 .chip{
   font-weight:700;color:var(--accent);background:#fff;border:1.5px solid var(--accent);
@@ -64,10 +63,7 @@ hr{border:0;border-top:1px solid var(--line);margin:26px 0}
 
 /* HERO */
 .hero{margin:24px 0 8px}
-.hero-card{
-  border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow-m);
-  background:#fff;
-}
+.hero-card{border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow-m);background:#fff}
 .hero-inner{
   display:grid;gap:28px;grid-template-columns:1.05fr 1fr;align-items:center;
   padding:40px 32px 28px
@@ -78,11 +74,11 @@ hr{border:0;border-top:1px solid var(--line);margin:26px 0}
 
 /* FEATURE IMAGE under hero */
 .feature{margin-top:18px}
-/* <figure> has default margins; kill them so it lines up perfectly with the wrap */
+/* <figure> has default margins — kill them so it lines up perfectly with the wrap */
 .feature-card{margin:0;border:1px solid var(--line);border-radius:26px;overflow:hidden;background:#fff;box-shadow:var(--shadow-m)}
-.feature-card img{width:100%;height:520px;object-fit:cover;display:block}
+.feature-card img{width:100%;height:520px;object-fit:cover}
 
-/* Sections & cards */
+/* SECTIONS & CARDS */
 .section{margin:42px 0}
 .section h2{display:flex;align-items:center;gap:10px}
 .dot{height:10px;width:10px;border-radius:50%;background:linear-gradient(90deg,var(--accent),var(--accent2));display:inline-block}
@@ -91,33 +87,31 @@ hr{border:0;border-top:1px solid var(--line);margin:26px 0}
 .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:var(--shadow-s);transition:transform .08s ease}
 .card:hover{transform:translateY(-2px)}
 
-.icon{
-  width:54px;height:54px;border-radius:12px;display:inline-grid;place-items:center;margin-bottom:10px;
-  background:#F0FDF4;border:1px solid #A7F3D0
-}
+.icon{width:54px;height:54px;border-radius:12px;display:inline-grid;place-items:center;margin-bottom:10px;background:#F0FDF4;border:1px solid #A7F3D0}
 .icon svg{width:28px;height:28px;stroke:#0F766E;stroke-width:2;fill:none}
 
-/* Pricing */
+/* PRICING */
 .price{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:var(--shadow-s)}
 .price .big{font-size:46px;font-weight:800}
 .price ul{margin:12px 0 0 18px}
 .check{color:#16a34a;font-weight:800;margin-right:8px}
 
 /* QR links */
-.qr-links .btn{margin-right:8px;margin-bottom:8px}
+.qr-links .btn,
+.qr-links .btn-outline{margin-right:8px;margin-bottom:8px}
 
-/* Map */
+/* MAP */
 .map{border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow-s)}
 .map iframe{width:100%;height:340px;border:0;display:block}
 
-/* Footer */
+/* FOOTER */
 footer{color:var(--muted);border-top:1px solid var(--line);margin-top:48px;padding:18px 0}
 
-/* ---------- Responsive polish ---------- */
+/* --------- RESPONSIVE POLISH ---------- */
 
 /* Tablet */
 @media (max-width:980px){
-  .nav .links{display:none}        /* keep top neat */
+  .nav .links{display:none} /* keep header clean */
   .nav .actions .btn{padding:10px 14px}
   .hero-inner{grid-template-columns:1fr;padding:28px}
   .feature-card img{height:360px}
