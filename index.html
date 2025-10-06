@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>F.I.T.T 21-20 — 24/7 Gym</title>
 
-  <!-- cache-bust the css by updating v=10 if you ever need to force refresh -->
-  <link rel="stylesheet" href="styles.css?v=10" />
-  <meta name="description" content="One price. 24/7 access. Strength floor, 2 infrared saunas, and a Technogym Flexibility station. Grovetown, GA." />
+  <!-- bump this number if you ever need to force refresh -->
+  <link rel="stylesheet" href="styles.css?v=11" />
+  <meta name="description" content="One price. 24/7 access. Strength floor, 2 infrared saunas, and a Technogym Flexability station. Grovetown, GA." />
 </head>
 
 <body>
@@ -72,23 +72,24 @@
   <!-- FEATURE IMAGE (squat / lift) -->
   <section class="wrap feature" aria-label="Gym action photo">
     <figure class="feature-card">
-      <!-- Use any similar Unsplash/stock image you like; this one reads strong and on-brand -->
       <img
-        src="https://images.unsplash.com/photo-1546484959-f9a53db89c39?q=80&w=1600&auto=format&fit=crop"
+        referrerpolicy="no-referrer"
+        src="https://images.unsplash.com/photo-1546484959-f9a53db89c39?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
         alt="Athlete setting up for a lift on platform"
         loading="lazy"
+        onerror="this.onerror=null;this.src='https://images.pexels.com/photos/2261485/pexels-photo-2261485.jpeg?auto=compress&cs=tinysrgb&w=1600&q=80';"
       />
     </figure>
   </section>
 
-  <!-- WHAT'S INSIDE -->
+  <!-- WHAT’S INSIDE -->
   <section class="wrap section">
     <h2><span class="dot"></span> What’s inside</h2>
 
     <div class="grid">
       <article class="card">
         <div class="icon">
-          <svg viewBox="0 0 24 24"><path d="M3 12h5m8 0h5M8 9v6m8-6v6M11 7v10m2-10v10"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M3 12h5m8 0h5M8 9v6m8-6v6M11 7v10m2-10v10" stroke="currentColor" fill="none" stroke-width="2"/></svg>
         </div>
         <h3>Strength</h3>
         <p>Two half racks on 8’×8’ platforms, Smith, DAP, hack/leg press, dumbbells 5–100 lb, Olympic bars & plates.</p>
@@ -96,7 +97,7 @@
 
       <article class="card">
         <div class="icon">
-          <svg viewBox="0 0 24 24"><path d="M12 3v18M6 8c0 3 6 3 6 6s-6 3-6 6M18 5c0 2-6 2-6 4"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 3v18M6 8c0 3 6 3 6 6s-6 3-6 6M18 5c0 2-6 2-6 4" stroke="currentColor" fill="none" stroke-width="2"/></svg>
         </div>
         <h3>Infrared Saunas</h3>
         <p>Two IR saunas (15–20 min). Hydrate, recover faster, then hit our 8-min Post-Sauna Reset.</p>
@@ -104,7 +105,7 @@
 
       <article class="card">
         <div class="icon">
-          <svg viewBox="0 0 24 24"><path d="M4 20c4-8 12-8 16 0M8 11a3 3 0 1 0 6 0 3 3 0 0 0-6 0"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M4 20c4-8 12-8 16 0M8 11a3 3 0 1 0 6 0 3 3 0 0 0-6 0" stroke="currentColor" fill="none" stroke-width="2"/></svg>
         </div>
         <h3>Technogym Stretch</h3>
         <p>Self-guided mobility on the Flexability Posterior with quick Pre-Lift and Low-Back routines.</p>
@@ -161,7 +162,7 @@
     </div>
   </section>
 
-  <!-- QUICK LINKS FOR QR POSTERS (optional, can hide later) -->
+  <!-- QR LINKS -->
   <section class="wrap section">
     <h2><span class="dot"></span> QR Guides</h2>
     <div class="qr-links">
@@ -190,7 +191,6 @@
   </footer>
 
   <script>
-    // set year
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 </body>
