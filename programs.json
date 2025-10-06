@@ -1,0 +1,80 @@
+{
+  "title": "FITT 21-20 Programming",
+  "month": "2025-01",
+  "tracks": [
+    {
+      "id": "3day",
+      "name": "Quick Start — 3×/week",
+      "weeks": [
+        {
+          "name": "Week 1",
+          "days": [
+            {
+              "name": "Day A (Squat)",
+              "type": "Strength",
+              "time": "45–60 min",
+              "intensity": "RPE 7",
+              "steps": [
+                "Warm-up: Pre-Lift Mobility (5 min) — scan QR",
+                "Back Squat 3×6–8",
+                "DB Bench 3×8–10",
+                "Lat Pulldown 3×10–12",
+                "Walking Lunge 2×12/side",
+                "Core: Plank 2×45s",
+                "Optional: Sauna 15–20 min → Post-Sauna Reset (8 min)"
+              ]
+            },
+            {
+              "name": "Day B (Hinge)",
+              "type": "Strength",
+              "time": "45–60 min",
+              "intensity": "RPE 7",
+              "steps": [
+                "Warm-up: Pre-Lift Mobility (5 min) — scan QR",
+                "Trap-Bar Deadlift 3×5–6",
+                "Incline DB Press 3×8–10",
+                "Chest-Supported Row 3×10–12",
+                "RDL 2×8",
+                "Core: Hollow Hold 2×30–40s"
+              ]
+            },
+            {
+              "name": "Day C (Upper/Conditioning)",
+              "type": "Strength + Engine",
+              "time": "45–55 min",
+              "intensity": "RPE 7–8",
+              "steps": [
+                "Warm-up: Pre-Lift Mobility (5 min) — scan QR",
+                "Seated Shoulder Press 3×8–10",
+                "Pull-ups (or Assisted) 3×AMRAP",
+                "Cable Fly 2×12–15",
+                "Leg Press 3×10",
+                "EMOM 8–10 min: 10 cals bike/row + 12 KB swings",
+                "Optional: Sauna 15–20 min → Post-Sauna Reset (8 min)"
+              ]
+            }
+          ]
+        },
+        { "name": "Week 2", "days": [{ "name": "Day A", "type": "Strength", "time": "45–60 min", "intensity": "RPE 7–8", "steps": ["Use Week 1 lifts — add 1 set or +2.5–5 lb.", "Finish with easy cardio 6–8 min."] }, { "name": "Day B", "type": "Strength", "time": "45–60 min", "intensity": "RPE 7–8", "steps": ["Same structure as Week 1; small load/rep bump.", "Core finisher of choice."] }, { "name": "Day C", "type": "Strength + Engine", "time": "45–55 min", "intensity": "RPE 8", "steps": ["Repeat EMOM; increase cals or swings if solid.", "Sauna optional."] }] },
+        { "name": "Week 3", "days": [{ "name": "Day A", "type": "Strength", "time": "45–60 min", "intensity": "RPE 8", "steps": ["Push top sets; keep form tight.", "Short finisher: 5–7 min bike/row."] }, { "name": "Day B", "type": "Strength", "time": "45–60 min", "intensity": "RPE 8", "steps": ["Same lifts; keep volume sensible.", "Core: 2–3 sets."] }, { "name": "Day C", "type": "Strength + Engine", "time": "45–55 min", "intensity": "RPE 8", "steps": ["EMOM: same or add 1 minute.", "Sauna optional."] }] },
+        { "name": "Week 4 (Deload)", "days": [{ "name": "Day A", "type": "Strength", "time": "35–45 min", "intensity": "RPE 6–7", "steps": ["Drop volume −20%.", "Tempo work 3–0–3 on main lift.", "Mobility focus."] }, { "name": "Day B", "type": "Strength", "time": "35–45 min", "intensity": "RPE 6–7", "steps": ["Cut accessory sets in half.", "Core: breathing/brace drill."] }, { "name": "Day C", "type": "Engine + Mobility", "time": "35–45 min", "intensity": "Easy–Moderate", "steps": ["Longer warm-up mobility (8–10 min).", "Zone 2 cardio 15–20 min.", "Sauna 15–20 min → Post-Sauna Reset (8 min)."] }] }
+      ]
+    },
+    {
+      "id": "5day",
+      "name": "All-Access Split — 5×/week",
+      "weeks": [
+        { "name": "Week 1", "days": [
+          { "name": "Mon — Upper Push", "type": "Strength", "time": "50–60 min", "intensity": "RPE 7", "steps": ["Warm-up QR", "Bench 4×6–8", "DB Shoulder Press 3×8–10", "Dips 3×AMRAP", "Cable Fly 2×12–15"] },
+          { "name": "Tue — Lower (Squat)", "type": "Strength", "time": "50–60 min", "intensity": "RPE 7", "steps": ["Back Squat 4×6", "Leg Press 3×10", "Hamstring Curl 3×12", "Calf Raise 3×12–15"] },
+          { "name": "Wed — Upper Pull", "type": "Strength", "time": "45–55 min", "intensity": "RPE 7", "steps": ["Lat Pulldown 4×8–10", "Chest-Supported Row 3×10–12", "Face Pull 3×12–15", "Curl 3×10–12"] },
+          { "name": "Thu — Lower (Hinge)", "type": "Strength", "time": "50–60 min", "intensity": "RPE 7", "steps": ["Trap-Bar Deadlift 4×5–6", "RDL 3×8", "Lunge 2×12/side", "Core: Plank 2×45s"] },
+          { "name": "Fri — Engine + Arms", "type": "Conditioning", "time": "35–45 min", "intensity": "RPE 7–8", "steps": ["EMOM 10 min: 10 cals + 12 KB swings", "Superset: Curl/Pushdown 3×12–15", "Optional: Sauna 15–20 min → Reset (8 min)."] }
+        ]},
+        { "name": "Week 2", "days": [{ "name": "Repeat W1 with +1 set or small load bump on primaries", "type": "", "time": "", "intensity": "", "steps": [] }] },
+        { "name": "Week 3", "days": [{ "name": "Repeat W1 with RPE ~8 on top sets", "type": "", "time": "", "intensity": "", "steps": [] }] },
+        { "name": "Week 4 (Deload)", "days": [{ "name": "−20% volume, focus on tempo and mobility", "type": "", "time": "", "intensity": "", "steps": [] }] }
+      ]
+    }
+  ]
+}
