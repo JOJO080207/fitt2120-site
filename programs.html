@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Programs — F.I.T.T 21-20</title>
   <link rel="icon" type="image/png" href="/assets/fitt-logo-32.png" />
-  <link rel="stylesheet" href="/styles.css?v=10" />
+  <link rel="stylesheet" href="/styles.css?v=11" />
   <style>
     /* page-specific polish (keeps your dark palette) */
     .prog-hero{ margin:24px 0 8px; }
@@ -96,13 +96,13 @@
     <p>© F.I.T.T 21-20 • Retired Sergeants Major • No fluff. Train hard. Recover smart.</p>
   </footer>
 
-  <!-- highlight current nav link -->
+  <!-- highlight current nav link (ONLY on /programs.html) -->
   <script>
-    const path = location.pathname.replace(/\/+$/,'');
-    document.querySelectorAll('.nav .links a').forEach(a=>{
-      const href=a.getAttribute('href');
-      if(href==='/programs.html' && path.endsWith('/programs.html')) a.classList.add('active');
-    });
+    const onPrograms = location.pathname.replace(/\/+$/,'').endsWith('/programs.html');
+    if (onPrograms) {
+      const link = document.querySelector('.nav .links a[href="/programs.html"]');
+      if (link) link.classList.add('active');
+    }
   </script>
 
   <!-- your logic; loads /programs.json -->
