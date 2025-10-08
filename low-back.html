@@ -1,36 +1,38 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Low-Back Decompress (10 min) | F.I.T.T 21-20</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Low-Back Decompress — F.I.T.T 21-20</title>
+  <link rel="icon" type="image/png" href="/assets/fitt-logo-32.png" />
+  <link rel="stylesheet" href="/styles.css?v=10" />
 </head>
 <body>
-  <div class="wrap">
-    <h1>Low-Back Decompress (10 min)</h1>
-    <div class="card">
-      <ol>
-        <li>Pelvic control + hinge — practice 30s, then hold <strong>45s ×2</strong></li>
-        <li>Hamstring (soft knee) — <strong>45s/side</strong></li>
-        <li>Glute/piriformis — <strong>45s/side</strong></li>
-        <li>Calf (bent-knee) — <strong>30–45s/side</strong></li>
-        <li>Bar reach (long spine) — <strong>45–60s</strong></li>
-        <li>Box breathing 4-4-4-4 × 4</li>
-      </ol>
-      <a class="btn" href="#t" onclick="start(600)">Start 10:00 timer</a>
-      <p id="t" style="font-size:2rem;margin-top:8px;"></p>
+
+  <!-- NAV -->
+  <div class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="/" aria-label="FITT 21-20 Home">
+        <img src="/assets/fitt-logo-512.png" alt="FITT 21-20 logo">
+      </a>
+      <div class="links">
+        <a href="/#inside">Inside</a>
+        <a href="/#how">How it works</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/programs.html">Programming</a>
+        <a href="/#location">Location</a>
+      </div>
+      <div class="actions">
+        <a class="btn" href="#" title="Join">Join $67/mo</a>
+        <a class="btn btn-outline" href="#" title="Day Pass">Day Pass $15</a>
+      </div>
     </div>
   </div>
 
+  <!-- KEEP YOUR EXISTING LOW-BACK PAGE CONTENT BELOW THIS LINE -->
+
   <script>
-    function start(s){
-      const el=document.getElementById('t'); clearInterval(window._ti);
-      window._ti=setInterval(()=>{
-        el.textContent=new Date(s--*1000).toISOString().substr(14,5);
-        if(s<0){clearInterval(window._ti); el.textContent="Done — wipe pads.";}
-      },1000);
-    }
+    // no-op for this page; keeping for consistency
   </script>
 </body>
 </html>
