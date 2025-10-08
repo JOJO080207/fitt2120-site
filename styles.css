@@ -35,13 +35,18 @@ hr{border:0;border-top:1px solid var(--line);margin:26px 0}
   position:sticky;top:0;z-index:50;background:rgba(10,10,8,.82);
   backdrop-filter:blur(8px);border-bottom:1px solid var(--line)
 }
-.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
-.brand{display:flex;align-items:center;gap:10px}
-.brand img{height:36px;width:auto;display:block}
-.brand .word{font-family:"Bebas Neue",Inter,sans-serif;font-size:28px;letter-spacing:.4px;color:var(--ink)}
-.nav .links a{margin-right:18px;color:var(--muted)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:18px}
+.brand{display:flex;align-items:center}
+.brand img{height:64px;width:auto;display:block}     /* BIGGER LOGO */
+.nav .links{display:flex;gap:18px}
+.nav .links a{color:var(--muted)}
 .nav .links a:hover{color:var(--ink)}
 .nav .actions a{margin-left:10px}
+
+/* Mobile tweaks for nav */
+@media (max-width:980px){
+  .brand img{height:52px}
+}
 
 /* ===== Buttons ===== */
 .btn{
