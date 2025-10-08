@@ -17,13 +17,16 @@
     .track{ display:flex; gap:10px; flex-wrap:wrap; }
     .muted{ color: var(--muted); }
 
-    .day{ background:var(--card); border:1px solid var(--line); border-radius:18px; padding:18px; box-shadow:var(--shadow-s); }
+    .day{ background:var(--card); border:1px solid var(--line); border-radius:18px; padding:18px; box-shadow:var(--shadow-s); position:relative; z-index:1; }
     .day h4{ margin:0 0 6px; font-size:18px; font-weight:800; }
     .meta{ display:flex; gap:12px; flex-wrap:wrap; margin-bottom:10px; font-size:.95rem; color:var(--muted); }
     .meta span{ background:#1c1a13; border:1px solid #3a321f; padding:6px 10px; border-radius:10px; }
 
-    .prog-cta{ display:flex; gap:10px; flex-wrap:wrap; margin-top:12px; }
+    .prog-cta{ display:flex; gap:10px; flex-wrap:wrap; margin-top:12px; position:relative; z-index:5; }
     .note{ font-size:.95rem; color:var(--muted); }
+
+    /* ensure each section is its own stacking context so nothing bleeds over the CTA row */
+    .section{ position:relative; z-index:1; }
 
     @media (max-width:980px){
       .prog-head{ align-items:flex-start; }
@@ -84,7 +87,8 @@
   <!-- ACTIONS -->
   <section class="wrap section">
     <div class="prog-cta">
-      <a class="btn btn-lg" id="subscribe-ical" href="#" onclick="return false;">Add to Calendar (iCal)</a>
+      <!-- keep href '#' for now; we can wire an .ics later -->
+      <a class="btn btn-lg" id="subscribe-ical" href="#">Add to Calendar (iCal)</a>
       <a class="btn btn-outline btn-lg" href="/pre-lift.html">Pre-Lift Mobility</a>
       <a class="btn btn-outline btn-lg" href="/low-back.html">Low-Back Reset</a>
       <a class="btn btn-outline btn-lg" href="/sauna-howto.html">Sauna How-To</a>
