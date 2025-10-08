@@ -48,6 +48,12 @@ hr{border:0;border-top:1px solid var(--line);margin:26px 0}
 .nav .links{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
 .nav .links a{color:var(--muted);font-weight:600;letter-spacing:.2px}
 .nav .links a:hover{color:var(--ink)}
+/* active nav highlight */
+.nav .links a.active{
+  color: var(--ink);
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 2px;
+}
 .nav .actions{display:flex;align-items:center;gap:10px}
 
 /* Tablet */
