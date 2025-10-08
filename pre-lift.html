@@ -1,49 +1,40 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Stretch Routines | F.I.T.T 21-20</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pre-Lift Mobility — F.I.T.T 21-20</title>
+  <link rel="icon" type="image/png" href="/assets/fitt-logo-32.png" />
+  <link rel="stylesheet" href="/styles.css?v=10" />
 </head>
 <body>
-  <div class="wrap">
-    <h1>Stretch Routines</h1>
 
-    <div class="card">
-      <h2>Pre-Lift Mobility (5 min)</h2>
-      <ol>
-        <li>Hamstring hinge — <strong>30s/side ×2</strong></li>
-        <li>Calf stretch (knee straight) — <strong>30–45s/side</strong></li>
-        <li>Glute/piriformis — <strong>30–45s/side</strong></li>
-        <li>T-spine opener on bar — <strong>30–45s</strong></li>
-      </ol>
-      <a class="btn" href="#t" onclick="start(300)">Start 5:00 timer</a>
+  <!-- NAV -->
+  <div class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="/" aria-label="FITT 21-20 Home">
+        <img src="/assets/fitt-logo-512.png" alt="FITT 21-20 logo">
+      </a>
+      <div class="links">
+        <a href="/#inside">Inside</a>
+        <a href="/#how">How it works</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/programs.html">Programming</a>
+        <a href="/#location">Location</a>
+      </div>
+      <div class="actions">
+        <a class="btn" href="#" title="Join">Join $67/mo</a>
+        <a class="btn btn-outline" href="#" title="Day Pass">Day Pass $15</a>
+      </div>
     </div>
-
-    <div class="card" id="post-sauna">
-      <h2>Post-Sauna Reset (8 min)</h2>
-      <ol>
-        <li>Hamstring hinge — <strong>45s/side ×2</strong></li>
-        <li>Adductors — <strong>45s/side</strong></li>
-        <li>Glute/piriformis — <strong>45s/side</strong></li>
-        <li>Low-back decompression — <strong>45s ×2</strong></li>
-        <li>Breathing — <strong>4-in/6-out × 6 cycles</strong></li>
-      </ol>
-      <a class="btn" href="#t" onclick="start(480)">Start 8:00 timer</a>
-    </div>
-
-    <p id="t" style="font-size:2rem;margin-top:8px;"></p>
   </div>
 
+  <!-- KEEP YOUR EXISTING PRE-LIFT PAGE CONTENT BELOW THIS LINE -->
+  <!-- (do not delete your current content) -->
+
+  <!-- highlight current nav link (none on this page) -->
   <script>
-    function start(s){
-      const el=document.getElementById('t'); clearInterval(window._ti);
-      window._ti=setInterval(()=>{
-        el.textContent=new Date(s--*1000).toISOString().substr(14,5);
-        if(s<0){clearInterval(window._ti); el.textContent="Done — wipe pads.";}
-      },1000);
-    }
+    // no-op for this page; keeping for consistency
   </script>
 </body>
 </html>
