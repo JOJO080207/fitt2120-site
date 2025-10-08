@@ -76,24 +76,15 @@ hr{border:0;border-top:1px solid var(--line);margin:26px 0}
 .cta h3{margin-bottom:4px}
 .cta ul{margin:10px 0 0 18px}
 
-/* NEW: wrap the two primary CTAs for better mobile flow */
-.fitt-cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px}
-
 /* FEATURE IMAGE under hero */
 .feature{margin-top:18px}
 .feature-card{
   border:1px solid var(--line);border-radius:26px;overflow:hidden;
-  background:#fff;box-shadow:var(--shadow-m);
-  /* NEW: remove browser default figure margin that caused misalignment */
-  margin:0;
+  background:#fff;box-shadow:var(--shadow-m)
 }
 .feature-card img{
   width:100%;height:520px;object-fit:cover;display:block
 }
-
-/* NEW: alignment hooks (safe additions) */
-.fitt-hero-card{ /* extra breathing room on phones, handled in media query */ }
-.fitt-hero-media .fitt-hero-img{ display:block; width:100%; height:520px; object-fit:cover }
 
 /* Sections & cards */
 .section{margin:42px 0}
@@ -129,15 +120,5 @@ footer{color:var(--muted);border-top:1px solid var(--line);margin-top:48px;paddi
 /* Responsive */
 @media (max-width:980px){
   .hero-inner{grid-template-columns:1fr;padding:28px}
-  .fitt-hero-card{margin-top:4px} /* NEW: a touch more space when card stacks */
   .feature-card img{height:360px}
-}
-
-@media (max-width:720px){
-  /* Trim nav links on small phones; keep primary actions */
-  .nav .links{display:none}
-  .nav .actions .btn{padding:10px 14px}
-  .brand{font-size:28px}
-  .chips{gap:8px}
-  .feature-card img{height:300px}
 }
