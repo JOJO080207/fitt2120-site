@@ -6,6 +6,41 @@
   <title>F.I.T.T 21-20 — 24/7 Gym</title>
   <link rel="icon" type="image/png" href="/assets/fitt-logo-32.png" />
   <link rel="stylesheet" href="styles.css?v=9" />
+
+  <!-- === Quick overrides (safe to remove later if you move to styles.css) === -->
+  <style>
+    /* Make header pop a bit */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      /* soft shadow to lift the bar */
+      box-shadow: 0 6px 18px rgba(0,0,0,.25);
+      /* optional: subtle border glow that matches gold vibe */
+      /* outline: 1px solid rgba(214, 173, 101, .12); */
+      backdrop-filter: saturate(120%) blur(0px);
+    }
+
+    /* Slightly larger logo while keeping aspect clean */
+    .nav .brand img {
+      width: 132px;   /* was ~118px visually; +12% presence */
+      height: auto;
+      display: block;
+    }
+
+    /* Make sure the nav has nice vertical rhythm with bigger logo */
+    .nav .nav-inner {
+      align-items: center;
+      gap: 18px;
+      min-height: 76px;
+    }
+
+    /* Keep it tight on small screens */
+    @media (max-width: 640px) {
+      .nav .brand img { width: 112px; }
+      .nav .nav-inner { min-height: 68px; }
+    }
+  </style>
 </head>
 <body>
 
