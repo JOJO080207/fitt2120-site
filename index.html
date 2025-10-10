@@ -14,6 +14,31 @@
 
   <link rel="icon" type="image/png" href="/assets/fitt-logo-32.png" />
   <link rel="stylesheet" href="styles.css?v=12" />
+
+  <!-- LocalBusiness JSON-LD (includes phone) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HealthClub",
+    "name": "J3L FITT",
+    "image": "/assets/MasterLogoJ3L.png",
+    "telephone": "762-242-5030",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "5045 Parham Rd",
+      "addressLocality": "Grovetown",
+      "addressRegion": "GA",
+      "postalCode": ""
+    },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "00:00",
+      "closes": "23:59"
+    }],
+    "url": "https://j3lfamily.com/"
+  }
+  </script>
 </head>
 <body>
 
@@ -33,6 +58,7 @@
       <div class="actions">
         <a class="btn" href="#" title="Join">Join $67/mo</a>
         <a class="btn btn-outline" href="#" title="Day Pass">Day Pass $15</a>
+        <a class="btn btn-outline" id="call-top" href="tel:+17622425030" title="Call J3L FITT">Call</a>
       </div>
     </div>
   </div>
@@ -52,6 +78,10 @@
             <div class="chip">Sauna + Stretch included</div>
           </div>
 
+          <p class="small" id="hero-phone" style="margin:.5rem 0 1rem">
+            Call/Text: <a id="phone-link-hero" href="tel:+17622425030">762-242-5030</a>
+          </p>
+
           <a class="btn btn-lg" href="#" title="Join">Join now</a>
           <a class="btn btn-outline btn-lg" href="#" title="Day Pass">Grab a Day Pass</a>
         </div>
@@ -65,6 +95,9 @@
             <li>✔ 2× Infrared saunas included</li>
             <li>✔ Technogym Flexability station</li>
           </ul>
+          <p class="small" style="margin-top:8px">
+            Phone: <a id="phone-link-cta" href="tel:+17622425030">762-242-5030</a>
+          </p>
           <p style="margin-top:12px">
             <a class="btn btn-lg" href="#" title="Join">Start Membership</a>
             <a class="btn btn-outline btn-lg" href="#" title="Day Pass">Day Pass</a>
@@ -159,6 +192,7 @@
       <p style="margin-top:14px">
         <a class="btn btn-lg" href="#" title="Join">Join now — $67</a>
         <a class="btn btn-outline btn-lg" href="#" title="Day Pass">Day Pass $15</a>
+        <a class="btn btn-outline btn-lg" id="call-pricing" href="tel:+17622425030" title="Call to ask about pricing">Call Us</a>
       </p>
     </div>
   </section>
@@ -182,6 +216,7 @@
         <h3 data-address>Address</h3>
         <p class="small">24/7 member access • Staffed hours posted on site</p>
         <p>Email: <a href="mailto:info@j3lfamily.com">info@j3lfamily.com</a></p>
+        <p>Phone: <a id="phone-link-location" href="tel:+17622425030">762-242-5030</a></p>
       </div>
       <div class="map">
         <iframe id="map-iframe" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src=""></iframe>
@@ -190,14 +225,40 @@
   </section>
 
   <footer class="wrap">
-    <p>© J3L FITT • Retired Sergeants Major • No fluff. Train hard. Recover smart.</p>
+    <p>© J3L FITT • Retired Sergeants Major • No fluff. Train hard. Recover smart. • <a id="phone-link-footer" href="tel:+17622425030">762-242-5030</a></p>
   </footer>
 
   <script>
+    // ===== CONTACT CONFIG =====
+    const PHONE_HUMAN = "762-242-5030";   // Display format
+    const PHONE_E164  = "+17622425030";   // Click-to-call format
+
+    // ===== ADDRESS / MAP CONFIG =====
     const ADDRESS = "5045 Parham Rd";
     document.querySelectorAll('[data-address]').forEach(el => el.textContent = ADDRESS);
     document.getElementById('map-iframe').src =
       "https://www.google.com/maps?q=" + encodeURIComponent(ADDRESS) + "&output=embed";
+
+    // Wire phone links everywhere
+    const phoneAnchors = [
+      "call-top",
+      "phone-link-hero",
+      "phone-link-cta",
+      "call-pricing",
+      "phone-link-location",
+      "phone-link-footer"
+    ];
+    phoneAnchors.forEach(id => {
+      const a = document.getElementById(id);
+      if (a) { a.href = "tel:" + PHONE_E164; a.textContent = PHONE_HUMAN; }
+    });
+
+    // Also render the inline "Call/Text" line in hero if needed
+    const inlineHero = document.getElementById("hero-phone");
+    if (inlineHero) {
+      const link = inlineHero.querySelector("a");
+      if (link) { link.href = "tel:" + PHONE_E164; link.textContent = PHONE_HUMAN; }
+    }
   </script>
 
   <!-- Tidio chat widget -->
