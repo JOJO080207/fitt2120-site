@@ -7,9 +7,31 @@
   <meta name="description" content="Clickable sitemap for J3L FITT: all pages in one place." />
   <link rel="icon" type="image/png" href="/assets/fitt-logo-32.png" />
   <link rel="stylesheet" href="/styles.css?v=13" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://fitt2120.j3lfamily.com/sitemap.html" />
+
+  <!-- Breadcrumb JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://fitt2120.j3lfamily.com/"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Sitemap",
+      "item": "https://fitt2120.j3lfamily.com/sitemap.html"
+    }]
+  }
+  </script>
 </head>
 <body>
-  <!-- NAV (same as site) -->
+  <!-- NAV -->
   <div class="nav" role="navigation" aria-label="Primary">
     <div class="wrap nav-inner">
       <a class="brand" href="/" aria-label="J3L FITT Home">
@@ -47,7 +69,7 @@
           <li><a href="/#pricing">Pricing</a></li>
           <li><a href="/#inside">Inside the gym</a></li>
           <li><a href="/#how">How it works</a></li>
-          <li><a href="/#location">Location & hours</a></li>
+          <li><a href="/#location">Location &amp; hours</a></li>
         </ul>
       </div>
 
@@ -71,7 +93,9 @@
       </div>
     </div>
 
-    <p class="small muted" style="margin-top:12px">If you can’t find something, email <a href="mailto:info@j3lfamily.com">info@j3lfamily.com</a>.</p>
+    <p class="small muted" style="margin-top:12px">
+      If you can’t find something, email <a href="mailto:info@j3lfamily.com">info@j3lfamily.com</a>.
+    </p>
   </main>
 
   <footer class="wrap">
