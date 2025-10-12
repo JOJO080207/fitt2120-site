@@ -6,25 +6,25 @@
 
   <!-- ===== UPDATED SEO + SOCIAL ===== -->
   <title>J3L FITT — 24/7 Gym + Recovery</title>
-  <meta name="description" content="Train hard. Recover smart. Veteran-owned gym with 24/7 access and infrared saunas included." />
+  <meta name="description" content="Train hard. Recover smart. Veteran-owned gym with 24/7 access and infrared saunas included — plus Evolt 360 body composition scans." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://j3lfamily.com/" />
 
   <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="J3L FITT — 24/7 Gym + Recovery" />
-  <meta property="og:description" content="Train hard. Recover smart. Veteran-owned gym with 24/7 access + infrared saunas included." />
+  <meta property="og:description" content="Train hard. Recover smart. 24/7 access + 2 IR saunas + Evolt 360 body scan." />
   <meta property="og:url" content="https://j3lfamily.com/" />
   <meta property="og:image" content="/assets/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="J3L FITT — 24/7 Gym + Recovery" />
-  <meta name="twitter:description" content="Train hard. Recover smart. Veteran-owned gym with 24/7 access + infrared saunas included." />
+  <meta name="twitter:description" content="Train hard. Recover smart. 24/7 access + 2 IR saunas + Evolt 360 body scan." />
   <meta name="twitter:image" content="/assets/og-image.png" />
 
   <link rel="icon" type="image/png" href="/assets/fitt-logo-32.png" />
   <link rel="stylesheet" href="styles.css?v=13" />
 
-  <!-- LocalBusiness JSON-LD (includes phone) -->
+  <!-- LocalBusiness JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -40,25 +40,27 @@
       "postalCode": "30813",
       "addressCountry": "US"
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 33.458,
-      "longitude": -82.197
-    },
-    $1
-      {"@type":"LocationFeatureSpecification","name":"Body Composition Scanner (Evolt 360)","value":true},
-      {"@type":"LocationFeatureSpecification","name":"App-based Entry","value":true}
-    ],
     "openingHoursSpecification": [{
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
       "opens": "00:00",
       "closes": "23:59"
     }],
-    "priceRange": "$$",
-    "currenciesAccepted": "USD",
-    "paymentAccepted": "Cash, Credit Card, Debit Card, Mobile Payments",
     "url": "https://j3lfamily.com/"
+  }
+  </script>
+
+  <!-- Service JSON-LD: Evolt 360 Body Composition Scan -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Service",
+    "name":"Evolt 360 Body Composition Scan",
+    "provider":{"@type":"HealthClub","name":"J3L FITT"},
+    "areaServed":"Grovetown, GA",
+    "serviceType":"Body composition analysis",
+    "description":"60-second impedance scan with segmental muscle/fat, BMR, visceral fat rating, and trend tracking.",
+    "offers":{"@type":"Offer","priceCurrency":"USD","price":"0","category":"Included with membership"}
   }
   </script>
 </head>
@@ -76,6 +78,7 @@
         <a href="/#pricing">Pricing</a>
         <a href="/programs.html">Programming</a>
         <a href="/benefits-ir-sauna.html">Benefits of IR Sauna</a>
+        <a href="/evolt-360.html">Evolt 360 Scan</a>
         <a href="/#location">Location</a>
       </div>
       <div class="actions">
@@ -107,6 +110,7 @@
 
           <a class="btn btn-lg" href="#" title="Join">Join now</a>
           <a class="btn btn-outline btn-lg" href="#" title="Day Pass">Grab a Day Pass</a>
+          <a class="btn btn-outline btn-lg" href="/evolt-360.html" title="Book a Scan">Book a Scan</a>
         </div>
 
         <div class="cta">
@@ -124,6 +128,7 @@
           <p style="margin-top:12px">
             <a class="btn btn-lg" href="#" title="Join">Start Membership</a>
             <a class="btn btn-outline btn-lg" href="#" title="Day Pass">Day Pass</a>
+            <a class="btn btn-outline btn-lg" href="/evolt-360.html" title="Book a Scan">Book a Scan</a>
           </p>
         </div>
       </div>
@@ -169,7 +174,7 @@
           <svg viewBox="0 0 24 24" role="img" aria-label="Evolt 360 Body Scan"><circle cx="12" cy="6" r="2"/><path d="M9 12h3l2 3 3 1v2l-4-1-2 3H9l2-4-3-4Z"/></svg>
         </div>
         <h3>Evolt 360 Body Scan</h3>
-        <p>Track body composition with a 60‑second Evolt 360 scan: muscle, body fat %, and segmental insights.</p>
+        <p>Track body composition with a 60-second Evolt 360 scan: muscle, body fat %, and segmental insights.</p>
       </div>
     </div>
   </section>
@@ -197,7 +202,7 @@
           <svg viewBox="0 0 24 24" role="img" aria-label="Lift and recover"><path d="m9 16-4-4 1.6-1.6L9 12.8l8.4-8.4L19 6l-10 10Z"/></svg>
         </div>
         <h3>3) Lift & recover</h3>
-        <p>Standard warm-up, your session, then sauna or stretch.</p>
+        <p>Standard warm-up, your session, then sauna or scan.</p>
       </div>
     </div>
   </section>
@@ -218,6 +223,7 @@
         <a class="btn btn-lg" href="#" title="Join">Join now — $67</a>
         <a class="btn btn-outline btn-lg" href="#" title="Day Pass">Day Pass $15</a>
         <a class="btn btn-outline btn-lg" id="call-pricing" href="tel:+17622425030" title="Call to ask about pricing">Call Us</a>
+        <a class="btn btn-outline btn-lg" href="/evolt-360.html" title="Book a Scan">Book a Scan</a>
       </p>
     </div>
   </section>
@@ -231,6 +237,7 @@
       <a class="btn btn-outline" href="/pre-lift.html">Pre-Lift Mobility (5 min)</a>
       <a class="btn btn-outline" href="/low-back.html">Low-Back Decompress (10 min)</a>
       <a class="btn btn-outline" href="/benefits-ir-sauna.html">Benefits of IR Sauna</a>
+      <a class="btn" href="/evolt-360.html">Book an Evolt 360 Scan</a>
     </p>
   </section>
 
