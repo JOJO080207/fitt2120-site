@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Evolt 360 Body Scan — J3L FITT</title>
+  <meta name="description" content="Track your body composition in 60 seconds with the Evolt 360 at J3L FITT: body fat %, skeletal muscle mass, visceral fat rating, and segmental balance." />
+  <link rel="icon" type="image/png" href="/assets/fitt-logo-32.png" />
+  <link rel="stylesheet" href="/styles.css?v=13" />
+
+  <!-- Service JSON-LD for this landing page -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Service",
+    "name":"Evolt 360 Body Composition Scan",
+    "provider":{"@type":"HealthClub","name":"J3L FITT"},
+    "areaServed":"Grovetown, GA",
+    "serviceType":"Body composition analysis",
+    "description":"60-second impedance scan with segmental muscle/fat, BMR, visceral fat rating, and trend tracking.",
+    "offers":{"@type":"Offer","priceCurrency":"USD","price":"0","category":"Included with membership"}
+  }
+  </script>
+</head>
+<body>
+  <!-- NAV -->
+  <div class="nav" role="navigation" aria-label="Primary">
+    <div class="wrap nav-inner">
+      <a class="brand" href="/" aria-label="J3L FITT Home">
+        <img src="/assets/MasterLogoJ3L.png" alt="J3L FITT logo" width="140" height="auto" loading="eager" />
+      </a>
+      <div class="links">
+        <a href="/#inside">Inside</a>
+        <a href="/#how">How it works</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/programs.html">Programming</a>
+        <a href="/benefits-ir-sauna.html">Benefits of IR Sauna</a>
+        <a href="/#location">Location</a>
+      </div>
+      <div class="actions">
+        <a class="btn" href="#" title="Join">Join $67/mo</a>
+        <a class="btn btn-outline" href="#" title="Day Pass">Day Pass $15</a>
+        <a class="btn btn-outline" id="call-top" href="tel:+17622425030" title="Call J3L FITT">Call</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <header class="wrap hero" style="padding-top:48px">
+    <div class="hero-card" role="banner">
+      <div class="hero-inner">
+        <div>
+          <h1>EVOLT <span class="grad">360</span> BODY SCAN</h1>
+          <p class="small">60-second body composition scan: body fat %, skeletal muscle, visceral fat rating, and segmental balance.</p>
+          <p class="small">Included with membership. Perfect for baselining and monthly progress checks.</p>
+          <p>
+            <a class="btn btn-lg" href="#" title="Book a Scan">Book a Scan</a>
+            <a class="btn btn-outline btn-lg" href="/#pricing" title="Membership">View Membership</a>
+          </p>
+        </div>
+        <div class="cta">
+          <h3>What you get</h3>
+          <ul>
+            <li>Full body composition report (PDF)</li>
+            <li>Segmental muscle & fat distribution</li>
+            <li>Estimated BMR & calorie guidance</li>
+            <li>Trend tracking for challenges & goals</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HOW IT WORKS -->
+  <section class="wrap section">
+    <h2><span class="dot" aria-hidden="true"></span> How it works</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>1) Step on</h3>
+        <p>Remove shoes/socks, stand on the platform, and hold the handles.</p>
+      </div>
+      <div class="card">
+        <h3>2) Scan (60 sec)</h3>
+        <p>Remain still while the analyzer measures impedance across your body.</p>
+      </div>
+      <div class="card">
+        <h3>3) Review</h3>
+        <p>Get your report with body fat %, muscle mass, and segmental balance. Re-scan monthly.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="wrap section">
+    <h2><span class="dot" aria-hidden="true"></span> FAQ</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Is it safe?</h3>
+        <p>Yes for most people. Not recommended for pregnancy or anyone with implanted electronic medical devices. Ask staff if unsure.</p>
+      </div>
+      <div class="card">
+        <h3>What should I wear?</h3>
+        <p>Light clothing; remove shoes and socks. Keep posture relaxed and still during the scan.</p>
+      </div>
+      <div class="card">
+        <h3>How often should I scan?</h3>
+        <p>Baseline on day one, then every 4 weeks for progress tracking.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION FOOTER STRIP -->
+  <section class="wrap section">
+    <div class="grid">
+      <div class="card">
+        <h3>Questions?</h3>
+        <p>Email: <a href="mailto:info@j3lfamily.com">info@j3lfamily.com</a></p>
+        <p>Phone: <a id="phone-link-location" href="tel:+17622425030">762-242-5030</a></p>
+      </div>
+      <div class="map">
+        <iframe id="map-iframe" title="Map to J3L FITT" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src=""></iframe>
+      </div>
+    </div>
+  </section>
+
+  <footer class="wrap">
+    <p>© <span id="year"></span> J3L FITT • Retired Sergeants Major • No fluff. Train hard. Recover smart. • <a id="phone-link-footer" href="tel:+17622425030">762-242-5030</a></p>
+  </footer>
+
+  <script>
+    // Phone + map wiring (matches the rest of site)
+    const PHONE_HUMAN = "762-242-5030";
+    const PHONE_E164  = "+17622425030";
+    const ADDRESS     = "5045 Parham Rd, Grovetown, GA 30813";
+
+    const map = document.getElementById('map-iframe');
+    if (map) map.src = "https://www.google.com/maps?q=" + encodeURIComponent(ADDRESS) + "&output=embed";
+
+    ["call-top","phone-link-location","phone-link-footer"].forEach(id => {
+      const a = document.getElementById(id);
+      if (a) { a.href = "tel:" + PHONE_E164; a.textContent = PHONE_HUMAN; }
+    });
+
+    const y = document.getElementById('year');
+    if (y) y.textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Tidio chat widget (async) -->
+  <script src="//code.tidio.co/p6zdgoyfzcz9i4fgporvhihwdv3apooc.js" async></script>
+</body>
+</html>
