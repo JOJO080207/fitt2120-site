@@ -10,7 +10,7 @@
   <link rel="icon" type="image/png" href="/assets/fitt-logo-32.png" />
   <link rel="stylesheet" href="/styles.css?v=13" />
 
-  <!-- Match the Sauna page's light theme (scoped) -->
+  <!-- Light theme like Sauna page -->
   <style>
     body.light-sauna {
       --bg: #faf7f2;
@@ -37,8 +37,30 @@
     body.light-sauna .btn.btn-outline { background: transparent; color: var(--ink); border:1px solid var(--line); }
     body.light-sauna .btn.btn-lg { box-shadow: 0 8px 22px rgba(201,158,62,.18); }
 
-    /* Feature image & sections */
-    body.light-sauna .feature-card img { border-radius: 18px; box-shadow: 0 12px 36px rgba(26,20,9,.12), 0 0 40px rgba(242,116,39,.08); width: 100%; height: auto; }
+    /* Feature image (fits without scrolling) */
+    body.light-sauna .feature-card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 8px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-s);
+    }
+    body.light-sauna .feature-card img {
+      width: 100%;
+      height: auto;
+      max-height: 520px;       /* desktop cap */
+      object-fit: contain;     /* keep whole image visible */
+    }
+    @media (max-width: 1024px) {
+      body.light-sauna .feature-card img { max-height: 440px; }
+    }
+    @media (max-width: 640px) {
+      body.light-sauna .feature-card img { max-height: 320px; }
+    }
+
+    /* Sections */
     body.light-sauna .feature { background: linear-gradient(180deg, #fbf8f2 0%, #ffffff 100%); border-top: 1px solid var(--line); }
     body.light-sauna .section { border-top: 1px solid var(--line); padding-top: 28px; }
 
@@ -124,14 +146,14 @@
     </div>
   </header>
 
-  <!-- FEATURE IMAGE (uses your uploaded file) -->
+  <!-- FEATURE IMAGE (now constrained) -->
   <section class="wrap feature">
     <figure class="feature-card">
       <img
         src="/assets/evolt-360.jpg"
         alt="Evolt 360 body composition analyzer"
         loading="eager"
-        referrerpolicy="no-referrer"
+        decoding="async"
       />
     </figure>
   </section>
@@ -193,7 +215,7 @@
   </footer>
 
   <script>
-    // Phone + map wiring (same as other pages)
+    // Phone + map wiring
     const PHONE_HUMAN = "762-242-5030";
     const PHONE_E164  = "+17622425030";
     const ADDRESS     = "5045 Parham Rd, Grovetown, GA 30813";
