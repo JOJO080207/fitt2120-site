@@ -3,66 +3,84 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Low-Back Decompress — F.I.T.T 21-20</title>
+  <title>Low‑Back Decompress (10 min) — J3L FITT</title>
+  <meta name="description" content="Gentle 10‑minute sequence to reduce stiffness and restore neutral spine. Uses only a mat, a light mini‑band, and an optional bench/box." />
   <link rel="icon" type="image/png" href="/assets/fitt-logo-32.png" />
-  <link rel="stylesheet" href="/styles.css?v=11" />
+  <link rel="stylesheet" href="/styles.css?v=13" />
+
+  <!-- Breadcrumb JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem", "position": 1,
+      "name": "Home", "item": "https://j3lfamily.com/"
+    },{
+      "@type": "ListItem", "position": 2,
+      "name": "Low‑Back Decompress"
+    }]
+  }
+  </script>
 </head>
 <body>
-
-  <!-- NAV -->
-  <div class="nav">
+  <!-- NAV (updated logo) -->
+  <div class="nav" role="navigation" aria-label="Primary">
     <div class="wrap nav-inner">
-      <a class="brand" href="/" aria-label="FITT 21-20 Home">
-        <img src="/assets/fitt-logo-512.png" alt="FITT 21-20 logo">
+      <a class="brand" href="/" aria-label="J3L FITT Home">
+        <img src="/assets/MasterLogoJ3L.png" alt="J3L FITT logo" width="140" height="auto" loading="eager" />
       </a>
       <div class="links">
         <a href="/#inside">Inside</a>
         <a href="/#how">How it works</a>
         <a href="/#pricing">Pricing</a>
         <a href="/programs.html">Programming</a>
+        <a href="/benefits-ir-sauna.html">Benefits of IR Sauna</a>
         <a href="/#location">Location</a>
       </div>
       <div class="actions">
         <a class="btn" href="#" title="Join">Join $67/mo</a>
         <a class="btn btn-outline" href="#" title="Day Pass">Day Pass $15</a>
+        <a class="btn btn-outline" id="call-top" href="tel:+17622425030" title="Call J3L FITT">Call</a>
       </div>
     </div>
   </div>
 
-  <header class="wrap hero" style="margin-top:24px">
-    <div class="hero-card">
+  <!-- HERO / HEADER CARD -->
+  <header class="wrap hero" style="padding-top:48px">
+    <div class="hero-card" role="banner">
       <div class="hero-inner">
         <div>
-          <h1>Low-Back Decompress <span class="grad">(10 min)</span></h1>
+          <h1>LOW‑BACK <span class="grad">DECOMPRESS</span> (10 MIN)</h1>
           <p class="small">Gentle sequence to reduce stiffness and restore neutral spine.</p>
         </div>
         <div class="cta">
           <h3>What you need</h3>
           <ul>
-            <li>Mat, light mini-band (optional)</li>
+            <li>Mat, light mini‑band (optional)</li>
             <li>Bench or box for supported positions</li>
           </ul>
+          <p class="small" style="margin-top:8px">Questions? Call <a id="phone-link-cta" href="tel:+17622425030">762‑242‑5030</a></p>
         </div>
       </div>
     </div>
   </header>
 
+  <!-- SEQUENCE -->
   <section class="wrap section">
-    <h2><span class="dot"></span> Sequence</h2>
+    <h2><span class="dot" aria-hidden="true"></span> Sequence</h2>
     <div class="grid">
       <div class="card">
         <h3>1) Pelvic Tilts (2 min)</h3>
         <p>Supine, knees bent. 2×20 slow posterior ↔ anterior tilts. Breathe out on posterior tilt.</p>
       </div>
       <div class="card">
-        <h3>2) McGill Big-3 (5 min)</h3>
-        <p>
-          Curl-up 2×10 (hold 3s) • Side plank 2×20–30s/side • Bird-dog 2×8/side with 2s pause.
-        </p>
+        <h3>2) McGill Big‑3 (5 min)</h3>
+        <p>Curl‑up 2×10 (hold 3s) • Side plank 2×20–30s/side • Bird‑dog 2×8/side with 2s pause.</p>
       </div>
       <div class="card">
         <h3>3) Supported Hip Hinge (2 min)</h3>
-        <p>Hands on bench/box, push hips back 10× → then mini-band walks 2×10 steps.</p>
+        <p>Hands on bench/box, push hips back 10× → then mini‑band walks 2×10 steps.</p>
       </div>
       <div class="card">
         <h3>4) Breathe & Reset (1 min)</h3>
@@ -71,13 +89,46 @@
     </div>
   </section>
 
-  <footer class="wrap">
-    <p>© F.I.T.T 21-20 • Retired Sergeants Major • No fluff. Train hard. Recover smart.</p>
-  </footer>
-  <!-- Tidio chat widget -->
-<script src="//code.tidio.co/p6zdgoyfzcz9i4fgporvhihwdv3apooc.js" async></script>
-</body>
-</html>
+  <!-- LOCATION FOOTER STRIP -->
+  <section class="wrap section">
+    <div class="grid">
+      <div class="card">
+        <h3>Find Us</h3>
+        <p>Email: <a href="mailto:info@j3lfamily.com">info@j3lfamily.com</a></p>
+        <p>Phone: <a id="phone-link-location" href="tel:+17622425030">762‑242‑5030</a></p>
+      </div>
+      <div class="map">
+        <iframe id="map-iframe" title="Map to J3L FITT" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src=""></iframe>
+      </div>
+    </div>
+  </section>
 
+  <footer class="wrap">
+    <p>© <span id="year"></span> J3L FITT • Retired Sergeants Major • No fluff. Train hard. Recover smart. • <a id="phone-link-footer" href="tel:+17622425030">762‑242‑5030</a></p>
+  </footer>
+
+  <script>
+    // ===== CONTACT CONFIG =====
+    const PHONE_HUMAN = "762-242-5030";
+    const PHONE_E164  = "+17622425030";
+
+    // ===== ADDRESS / MAP CONFIG =====
+    const ADDRESS = "5045 Parham Rd, Grovetown, GA 30813";
+    const map = document.getElementById('map-iframe');
+    if (map) map.src = "https://www.google.com/maps?q=" + encodeURIComponent(ADDRESS) + "&output=embed";
+
+    // Wire phone links everywhere
+    ["call-top","phone-link-cta","phone-link-location","phone-link-footer"].forEach(id => {
+      const a = document.getElementById(id);
+      if (a) { a.href = "tel:" + PHONE_E164; a.textContent = PHONE_HUMAN; }
+    });
+
+    // Current year in footer
+    const y = document.getElementById('year');
+    if (y) y.textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Tidio chat widget (async) -->
+  <script src="//code.tidio.co/p6zdgoyfzcz9i4fgporvhihwdv3apooc.js" async></script>
 </body>
 </html>
