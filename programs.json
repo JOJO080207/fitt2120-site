@@ -1,14 +1,14 @@
 {
-  "monthLabel": "March 2025",
-  "note": "12-week macrocycle; this block covers Weeks 1–4. Re-scan on Evolt in Week 4.",
+  "cycle_title": "Monthly Programming — 4-Week Block",
+  "cycle_code": "2025-10",
+  "notes": "Weeks 1–3 progress steadily, Week 4 deload ~50–60% volume / RPE 6–7. Warm up with Pre-Lift Mobility.",
   "tracks": [
     {
-      "id": "foundations",
-      "title": "Foundations (2–3 days/week)",
-      "summary": "Technique-first for new/returning lifters. Linear load, tempo focus.",
+      "name": "Foundations (2–3 days/week)",
+      "summary": "Technique-first for new/returning lifters. Tempo work, stable progress, and consistent movement quality.",
       "weeks": [
         {
-          "week": 1,
+          "title": "Week 1",
           "days": [
             {
               "name": "Day A — Squat + Push + Pull",
@@ -40,28 +40,99 @@
                 "Farmer Carry 6×20–30 m"
               ]
             }
-          ],
-          "progression": "Add 2.5–5 lb next session if last sets ≤ RPE 8 and form is clean."
+          ]
         },
-        { "week": 2, "copyFromWeek": 1, "progression": "Repeat Week 1 and add small load or 1 rep where RPE ≤ 8." },
-        { "week": 3, "copyFromWeek": 1, "progression": "As Week 2. Aim +2.5–5 lb on main lifts or +1 rep." },
         {
-          "week": 4,
+          "title": "Week 2",
           "days": [
-            { "name": "Deload Day A", "items": ["Use same lifts, 2×6–8 @ RPE 6–7"] },
-            { "name": "Deload Day B", "items": ["Use same lifts, 2×6–8 @ RPE 6–7"] }
-          ],
-          "progression": "Deload volume −40–50%. Evolt 360 re-scan this week."
+            {
+              "name": "Day A — Squat + Push + Pull",
+              "items": [
+                "Goblet Squat 4×6–8 (+2.5–5 lb or +1 rep)",
+                "DB Bench Press 4×6–8 (+load/reps)",
+                "Seated Cable Row 4×8–10 (+load)",
+                "DB RDL 3×8",
+                "Dead-bug 3×8/side"
+              ]
+            },
+            {
+              "name": "Day B — Hinge + Push + Pull",
+              "items": [
+                "Trap-bar Deadlift 4×4–5 @ RPE 7–8",
+                "Incline DB Press 4×8–10",
+                "Lat Pulldown 4×6–8 (pause 1s at chest)",
+                "Split Squat 3×8/leg (progress)",
+                "Side Plank 3×40–50s/side"
+              ]
+            },
+            {
+              "name": "Optional Day C — Single-Leg + Upper Mix",
+              "items": [
+                "Reverse Lunge 4×8/leg (progress)",
+                "One-Arm DB Row 4×8/side (progress)",
+                "Push-ups 3×AMRAP −1",
+                "Leg Press 3×10",
+                "Carry: Suitcase 6×20–30 m"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Week 3",
+          "days": [
+            {
+              "name": "Day A — Squat + Push + Pull",
+              "items": [
+                "Goblet Squat 4×8 (slow down, strong drive)",
+                "DB Bench Press 4×6–8 (aim RPE 8 on last set)",
+                "Seated Cable Row 4×8–10",
+                "DB RDL 3×10",
+                "Pallof Press 3×12/side"
+              ]
+            },
+            {
+              "name": "Day B — Hinge + Push + Pull",
+              "items": [
+                "Trap-bar Deadlift 4×3–4 @ RPE 8",
+                "Incline DB Press 4×8–10 (progress)",
+                "Lat Pulldown 4×6–8 (progress)",
+                "Split Squat 3×10/leg",
+                "Bird-dog 3×8/side (2s hold)"
+              ]
+            },
+            {
+              "name": "Optional Day C — Single-Leg + Upper Mix",
+              "items": [
+                "Reverse Lunge 4×10/leg",
+                "One-Arm DB Row 4×10/side",
+                "Push-ups 3×AMRAP −1",
+                "Leg Press 3×12",
+                "Carry: Farmer 6×25–35 m"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Week 4 — Deload",
+          "days": [
+            {
+              "name": "All sessions",
+              "items": [
+                "Use same lifts @ ~60% of Week 3 volume",
+                "Keep RPE 6–7, groove technique",
+                "Optional: Evolt 360 scan/check-in"
+              ]
+            }
+          ]
         }
       ]
     },
     {
-      "id": "strength3",
-      "title": "Strength 3-Day (full-body)",
-      "summary": "Balanced heavy/volume across three sessions.",
+      "name": "Strength (3 days/week)",
+      "summary": "Full-body strength with progressive overload. Balanced heavy + volume work.",
       "weeks": [
         {
-          "week": 1,
+          "title": "Week 1",
           "days": [
             {
               "name": "Day 1 — Heavy Lower + Push",
@@ -88,91 +159,367 @@
               "items": [
                 "Hack Squat or Leg Press 4×10",
                 "Seated Cable Row 4×8–10",
-                "DB OHP 3×8–10",
+                "DB Overhead Press 3×8–10",
                 "DB RDL 3×10",
                 "Cable Curl + Pressdown 3×12–15"
               ]
             }
-          ],
-          "progression": "If last set ≤ RPE 8, add 2.5–5 lb next week."
+          ]
         },
-        { "week": 2, "copyFromWeek": 1, "progression": "Add small load; match reps with clean form." },
-        { "week": 3, "copyFromWeek": 1, "progression": "Push top sets to solid RPE 8, then add 1 back-off set if fresh." },
         {
-          "week": 4,
+          "title": "Week 2",
           "days": [
-            { "name": "Deload Day 1", "items": ["Main lifts 3×3–5 @ ~70% of Week 3; accessories 2×10"] },
-            { "name": "Deload Day 2", "items": ["Trap-bar DL 3×2–3 light; accessories 2×8–10"] },
-            { "name": "Deload Day 3", "items": ["Machine Lower 3×10 easy; light upper pump 2×12–15"] }
-          ],
-          "progression": "Volume −40–50%. Evolt re-scan."
+            {
+              "name": "Day 1 — Heavy Lower + Push",
+              "items": [
+                "Back Squat 5×5 @ RPE 7.5–8 (add 2.5–5 lb)",
+                "DB Bench 4×6–8 (+load or +1 rep)",
+                "Chest-Supported Row 4×8 (progress)",
+                "Leg Curl 3×10–12",
+                "Cable Face Pull 3×12–15"
+              ]
+            },
+            {
+              "name": "Day 2 — Heavy Pull + Single-Leg",
+              "items": [
+                "Trap-bar Deadlift 5×3 @ RPE 7.5–8",
+                "Bulgarian Split Squat 3×8/leg (+load)",
+                "Pull-up / Pulldown 4×6–8 (+reps if clean)",
+                "DB Incline Press 3×8–10 (+load)",
+                "Farmer Carry 6×25–35 m"
+              ]
+            },
+            {
+              "name": "Day 3 — Volume Lower + Upper Mix",
+              "items": [
+                "Hack Squat or Leg Press 4×10 (progress)",
+                "Seated Cable Row 4×8–10 (progress)",
+                "DB Overhead Press 3×8–10 (+load)",
+                "DB RDL 3×10",
+                "Cable Curl + Pressdown 3×12–15"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Week 3",
+          "days": [
+            {
+              "name": "Day 1 — Heavy Lower + Push",
+              "items": [
+                "Back Squat 5×5 @ RPE 8 (last set strong)",
+                "DB Bench 4×6–8 (progress)",
+                "Chest-Supported Row 4×8–10",
+                "Leg Curl 3×10–12",
+                "Face Pull 3×15"
+              ]
+            },
+            {
+              "name": "Day 2 — Heavy Pull + Single-Leg",
+              "items": [
+                "Trap-bar Deadlift 5×3 @ RPE 8",
+                "Bulgarian Split Squat 3×10/leg",
+                "Pull-up / Pulldown 4×6–8 (progress)",
+                "DB Incline Press 3×8–10 (progress)",
+                "Farmers Carry 6×25–35 m"
+              ]
+            },
+            {
+              "name": "Day 3 — Volume Lower + Upper Mix",
+              "items": [
+                "Hack Squat or Leg Press 4×10 (progress)",
+                "Seated Cable Row 4×8–10",
+                "DB Overhead Press 3×10",
+                "DB RDL 3×12",
+                "Curls + Pressdown 3×12–15 (slow)"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Week 4 — Deload",
+          "days": [
+            {
+              "name": "All three days",
+              "items": [
+                "Same lifts @ ~50–60% of Week 3 volume",
+                "RPE 6–7; focus on bar speed and technique",
+                "Optional: add light mobility/sauna"
+              ]
+            },
+            {
+              "name": "Evolt 360 Scan",
+              "items": [
+                "Re-scan this week to adjust targets for next block"
+              ]
+            }
+          ]
         }
       ]
     },
     {
-      "id": "strength4",
-      "title": "Strength 4-Day (Upper/Lower)",
-      "summary": "Undulating focus: Heavy, Volume, Power, Hypertrophy.",
+      "name": "Strength (4 days/week)",
+      "summary": "Undulating: Heavy • Volume • Power • Hypertrophy.",
       "weeks": [
         {
-          "week": 1,
+          "title": "Week 1",
           "days": [
             {
               "name": "Mon — Lower (Heavy)",
-              "items": ["Back Squat 5×3–5", "RDL 4×6", "Walking Lunge 3×8/leg", "Hanging Knee Raise 3×10–12"]
+              "items": [
+                "Back Squat 5×3–5",
+                "RDL 4×6",
+                "Walking Lunge 3×8/leg",
+                "Hanging Knee Raise 3×10–12"
+              ]
             },
             {
               "name": "Tue — Upper (Volume)",
-              "items": ["Bench 4×6–8", "Chest-Supported Row 4×8–10", "DB Incline 3×10", "Pulldown 3×10", "Lateral Raise 2–3×15"]
+              "items": [
+                "Bench 4×6–8",
+                "Chest-Supported Row 4×8–10",
+                "DB Incline 3×10",
+                "Pulldown 3×10",
+                "Lateral Raise 2–3×15"
+              ]
             },
             {
               "name": "Thu — Lower (Power/Speed)",
-              "items": ["Box Squat or Trap-bar Jump 6×2–3 @50–60%", "BB Hip Thrust 4×6–8", "Leg Press 3×12", "Copenhagen Plank 3×20–30s/side"]
+              "items": [
+                "Box Squat or Trap-bar Jump 6×2–3 @50–60%",
+                "BB Hip Thrust 4×6–8",
+                "Leg Press 3×12",
+                "Copenhagen Plank 3×20–30s/side"
+              ]
             },
             {
               "name": "Fri — Upper (Hypertrophy)",
-              "items": ["DB Bench 4×8–10", "1-Arm DB Row 4×10/side", "Seated DB OHP 3×10", "Cable Row 3×12", "Face Pull + Pushdown 3×12–15"]
+              "items": [
+                "DB Bench 4×8–10",
+                "1-Arm DB Row 4×10/side",
+                "Seated DB OHP 3×10",
+                "Cable Row 3×12",
+                "Face Pull + Pushdown 3×12–15"
+              ]
             }
-          ],
-          "progression": "Heavy days +2.5–5 lb; Volume/Hyper add 1–2 reps or small load @ RPE ≤ 8."
+          ]
         },
-        { "week": 2, "copyFromWeek": 1, "progression": "Repeat with small progression." },
-        { "week": 3, "copyFromWeek": 1, "progression": "Push heavy top sets to solid RPE 8; keep speed clean on power day." },
         {
-          "week": 4,
+          "title": "Week 2",
           "days": [
-            { "name": "Mon — Lower Deload", "items": ["Back Squat 3×3 light; accessories 2×8–10"] },
-            { "name": "Tue — Upper Deload", "items": ["Bench 3×5 light; back/shoulders 2×12"] },
-            { "name": "Thu — Lower Deload", "items": ["Hip Thrust 3×6 easy; Leg Press 2×12"] },
-            { "name": "Fri — Upper Deload", "items": ["DB Bench 3×8 easy; rows/pulls 2×12"] }
-          ],
-          "progression": "Volume −40–50%. Evolt re-scan."
+            {
+              "name": "Mon — Lower (Heavy)",
+              "items": [
+                "Back Squat 5×3–5 (+2.5–5 lb)",
+                "RDL 4×6 (progress)",
+                "Reverse Lunge 3×8/leg",
+                "Hanging Knee Raise 3×12"
+              ]
+            },
+            {
+              "name": "Tue — Upper (Volume)",
+              "items": [
+                "Bench 4×6–8 (progress)",
+                "Chest-Supported Row 4×8–10",
+                "DB Incline 3×10",
+                "Pulldown 3×10 (tempo 2–1–2)",
+                "Lateral Raise 3×15"
+              ]
+            },
+            {
+              "name": "Thu — Lower (Power/Speed)",
+              "items": [
+                "Box Squat or Trap-bar Jump 6×2–3 (fast)",
+                "BB Hip Thrust 4×6–8 (pause 1s)",
+                "Leg Press 3×12 (progress)",
+                "Hollow Hold 3×20–30s"
+              ]
+            },
+            {
+              "name": "Fri — Upper (Hypertrophy)",
+              "items": [
+                "DB Bench 4×8–10 (progress)",
+                "1-Arm DB Row 4×10/side (progress)",
+                "Seated DB OHP 3×10",
+                "Cable Row 3×12 (slow ecc)",
+                "Curls + Pressdown 3×12–15"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Week 3",
+          "days": [
+            {
+              "name": "Mon — Lower (Heavy)",
+              "items": [
+                "Back Squat 5×3–4 @ RPE 8",
+                "RDL 4×6 (progress)",
+                "Walking Lunge 3×10/leg",
+                "Hanging Knee Raise 3×12–15"
+              ]
+            },
+            {
+              "name": "Tue — Upper (Volume)",
+              "items": [
+                "Bench 4×6–8 (aim top end)",
+                "Chest-Supported Row 4×8–10 (progress)",
+                "DB Incline 3×10 (progress)",
+                "Pulldown 3×10 (progress)",
+                "Lateral Raise 3×15–20"
+              ]
+            },
+            {
+              "name": "Thu — Lower (Power/Speed)",
+              "items": [
+                "Box Squat or Trap-bar Jump 6×2 (explosive)",
+                "BB Hip Thrust 4×6",
+                "Leg Press 3×15",
+                "Copenhagen Plank 3×30–40s/side"
+              ]
+            },
+            {
+              "name": "Fri — Upper (Hypertrophy)",
+              "items": [
+                "DB Bench 4×8–10 (last set RPE ≤9)",
+                "1-Arm DB Row 4×10/side (progress)",
+                "Seated DB OHP 3×12",
+                "Cable Row 3×12–15",
+                "Curls + Pressdown 3×12–15 (pump)"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Week 4 — Deload",
+          "days": [
+            {
+              "name": "Mon — Lower Deload",
+              "items": [
+                "Back Squat 3×3 light; accessories 2×8–10"
+              ]
+            },
+            {
+              "name": "Tue — Upper Deload",
+              "items": [
+                "Bench 3×5 light; accessories 2×12"
+              ]
+            },
+            {
+              "name": "Thu — Lower Deload",
+              "items": [
+                "RDL 3×5 light; leg press 2×12; easy core"
+              ]
+            },
+            {
+              "name": "Fri — Upper Deload",
+              "items": [
+                "DB Incline 2×10 easy; rows 2×12; light arms"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Conditioning (2–3 days/week)",
+      "summary": "Intervals, threshold work, and Zone 2 to build capacity without crushing recovery.",
+      "weeks": [
+        {
+          "title": "Week 1",
+          "days": [
+            {
+              "name": "Session A — Intervals",
+              "items": [
+                "10 rounds: 30s ON / 60s OFF @ RPE 8–9",
+                "Choose: Bike / Row / Tread"
+              ]
+            },
+            {
+              "name": "Session B — Threshold",
+              "items": [
+                "5 × (3 min @ RPE 7.5–8 / 2 min easy)",
+                "Nasal breathing on recoveries if possible"
+              ]
+            },
+            {
+              "name": "Optional Session C — Zone 2",
+              "items": [
+                "20–30 min continuous @ RPE 5–6",
+                "Conversational pace finish fresh"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Week 2",
+          "days": [
+            {
+              "name": "Session A — Intervals (progress)",
+              "items": [
+                "10 rounds: 40s ON / 60s OFF @ RPE 8–9"
+              ]
+            },
+            {
+              "name": "Session B — Threshold (progress)",
+              "items": [
+                "5 × (4 min @ RPE 7.5–8 / 2 min easy)"
+              ]
+            },
+            {
+              "name": "Optional Session C — Zone 2",
+              "items": [
+                "25–35 min @ RPE 5–6"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Week 3",
+          "days": [
+            {
+              "name": "Session A — Intervals (progress)",
+              "items": [
+                "12 rounds: 30s ON / 45s OFF @ RPE 8–9"
+              ]
+            },
+            {
+              "name": "Session B — Threshold (progress)",
+              "items": [
+                "6 × (3 min @ RPE 8 / 2 min easy)"
+              ]
+            },
+            {
+              "name": "Optional Session C — Zone 2",
+              "items": [
+                "30–40 min @ RPE 5–6"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Week 4 — Deload",
+          "days": [
+            {
+              "name": "1–2 light sessions",
+              "items": [
+                "Pick any session above",
+                "Reduce time by ~50%",
+                "Keep RPE ≤ 6"
+              ]
+            }
+          ]
         }
       ]
     }
   ],
-  "conditioning": [
-    {
-      "title": "Intervals",
-      "detail": "10× (30s hard / 60s easy) · RPE 8–9 · Alternate bike/rower if desired."
-    },
-    {
-      "title": "Threshold",
-      "detail": "5× (3 min @ RPE 7.5–8 / 2 min easy)."
-    },
-    {
-      "title": "Zone 2 Steady",
-      "detail": "20–30 min @ RPE 5–6. Conversational pace; nasal breathing if possible."
-    },
-    {
-      "title": "Sled Circuit",
-      "detail": "4–6 rounds: Sled Push 20 m • KB Swing 15 • TRX Row 12 • Rest 60–90s."
-    }
-  ],
-  "recovery": [
-    "Pre-Lift Mobility (5 min) before strength days",
-    "Sauna 15–20 min 2–3×/wk; hydrate/electrolytes; cool down 10–15 min",
-    "Post-Sauna Reset (8 min) or Low-Back Decompress (10 min) as needed",
-    "Sleep 7–9h; 6–10k steps/day"
-  ]
+  "recovery": {
+    "warmup": "Pre-Lift Mobility (5 min) before strength days.",
+    "post": [
+      "Infrared Sauna: 15–20 min (2–3×/wk). Hydrate + electrolytes; cool down after.",
+      "Post-Sauna Reset (8 min) on combo days.",
+      "Low-Back Decompress (10 min) after heavy hinge days."
+    ],
+    "notes": "Aim 7–9 h sleep; 6–10k steps/day."
+  }
 }
