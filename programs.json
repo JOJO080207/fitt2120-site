@@ -1,432 +1,178 @@
 {
-  "title": "FITT 21-20 Programming",
-  "month": "2025-10",
+  "monthLabel": "March 2025",
+  "note": "12-week macrocycle; this block covers Weeks 1–4. Re-scan on Evolt in Week 4.",
   "tracks": [
     {
-      "id": "3day",
-      "name": "Quick Start — 3×/week",
+      "id": "foundations",
+      "title": "Foundations (2–3 days/week)",
+      "summary": "Technique-first for new/returning lifters. Linear load, tempo focus.",
       "weeks": [
         {
-          "name": "Week 1",
+          "week": 1,
           "days": [
             {
-              "name": "Day A (Squat + Pull)",
-              "type": "Strength",
-              "time": "45–60 min",
-              "intensity": "RPE 7",
-              "steps": [
-                "Warm-up: Pre-Lift Mobility (5 min) → Flexability Posterior (optional 3–5 min)",
-                "Back Squat on rack 5×5 @ RPE 7 (work up in 3–4 warm-up sets)",
-                "Seated Row (selectorized) 4×8–10",
-                "Lat Pulldown (selectorized/DAP) 3×10–12",
-                "Landmine Row 3×10/side",
-                "Finisher: Rower 6×250 m (easy 250 m between) OR curved treadmill 8×30s hard/60s easy",
-                "Optional: Sauna 15–20 min → Post-Sauna Reset (8 min)"
+              "name": "Day A — Squat + Push + Pull",
+              "items": [
+                "Goblet Squat 4×6–8 (2–3s down)",
+                "DB Bench Press 4×6–8",
+                "Seated Cable Row 4×8–10",
+                "DB RDL 3×8",
+                "Pallof Press 3×10/side"
               ]
             },
             {
-              "name": "Day B (Hinge + Press)",
-              "type": "Strength",
-              "time": "45–60 min",
-              "intensity": "RPE 7",
-              "steps": [
-                "Trap/Hex Bar Deadlift 5×3 @ RPE 7 (rest 2–3 min)",
-                "Chest Press (selectorized) 4×8–10",
-                "Shoulder Press (selectorized) 3×10–12",
-                "Face Pulls (DAP rope) 3×12–15",
-                "Smith Machine Split Squat 3×10/side",
-                "StairMaster: 10 min steady @ RPE 6–7"
+              "name": "Day B — Hinge + Push + Pull",
+              "items": [
+                "Trap-bar Deadlift or Rack Pull 4×5",
+                "Incline DB Press 3×8–10",
+                "Lat Pulldown 4×6–8",
+                "Split Squat 3×8/leg",
+                "Side Plank 3×30–45s/side"
               ]
             },
             {
-              "name": "Day C (Leg Press + Upper Mix)",
-              "type": "Strength + Conditioning",
-              "time": "50–65 min",
-              "intensity": "RPE 7",
-              "steps": [
-                "Leg Press or Leg Press/Hack 4×10–12",
-                "Seated Leg Curl 4×10–12",
-                "Leg Extension 3×12–15",
-                "DB Bench Press 3×8–10",
-                "Landmine Press 3×8/side",
-                "Slam Balls 6×10 fast reps (10–30 lb) — extra mat under slam zone",
-                "Curved Treadmill: 8–12 min easy cooldown"
+              "name": "Optional Day C — Single-Leg + Upper Mix",
+              "items": [
+                "Reverse Lunge 4×8/leg",
+                "One-Arm DB Row 4×8/side",
+                "Push-ups (or Smith) 3×AMRAP −2",
+                "Machine Leg Press 3×10",
+                "Farmer Carry 6×20–30 m"
               ]
             }
-          ]
+          ],
+          "progression": "Add 2.5–5 lb next session if last sets ≤ RPE 8 and form is clean."
         },
+        { "week": 2, "copyFromWeek": 1, "progression": "Repeat Week 1 and add small load or 1 rep where RPE ≤ 8." },
+        { "week": 3, "copyFromWeek": 1, "progression": "As Week 2. Aim +2.5–5 lb on main lifts or +1 rep." },
         {
-          "name": "Week 2",
+          "week": 4,
           "days": [
-            {
-              "name": "Day A (Squat + Pull)",
-              "type": "Strength",
-              "time": "45–60 min",
-              "intensity": "RPE 7–8",
-              "steps": [
-                "Warm-up: Pre-Lift Mobility (5 min)",
-                "Back Squat 5×4 @ RPE 7.5 (add 2.5–5 lb/side from W1 if last set ≤ RPE 8)",
-                "Seated Row 4×8–10 (last set AMRAP-1)",
-                "Lat Pulldown 3×10–12",
-                "Landmine Row 3×10/side (2s pause at chest)",
-                "Finisher: Rower 8×200 m @ RPE 8 (easy 200 m between)"
-              ]
-            },
-            {
-              "name": "Day B (Hinge + Press)",
-              "type": "Strength",
-              "time": "45–60 min",
-              "intensity": "RPE 7–8",
-              "steps": [
-                "Trap/Hex Bar Deadlift 6×2 @ RPE 7.5 (speed focus)",
-                "Chest Press 4×8–10 (slight load ↑)",
-                "Shoulder Press 3×10",
-                "Cable Fly (DAP) 3×12–15",
-                "Smith Split Squat 3×10/side (front foot elevated optional)",
-                "StairMaster: 8×60s hard / 60s easy"
-              ]
-            },
-            {
-              "name": "Day C (Leg Press + Upper Mix)",
-              "type": "Strength + Conditioning",
-              "time": "50–65 min",
-              "intensity": "RPE 7–8",
-              "steps": [
-                "Hack Squat or Leg Press 4×8–10 (controlled ecentric)",
-                "Seated Leg Curl 4×10–12",
-                "Leg Extension 3×12–15 (last set drop-set optional)",
-                "DB Incline Press 3×8–10",
-                "Cable Row (DAP) 3×10–12",
-                "Slam Balls EMOM 8 min: 8–12 reps",
-                "Curved Treadmill: 10 min easy"
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Week 3",
-          "days": [
-            {
-              "name": "Day A (Squat + Pull)",
-              "type": "Strength",
-              "time": "45–60 min",
-              "intensity": "RPE 8",
-              "steps": [
-                "Back Squat 5×3 @ RPE 8 (aim small load ↑)",
-                "Seated Row 5×6–8 (heavier)",
-                "Lat Pulldown 3×8–10",
-                "Landmine Row 3×8/side",
-                "Finisher: Curved Treadmill 10×20s hard / 70s easy"
-              ]
-            },
-            {
-              "name": "Day B (Hinge + Press)",
-              "type": "Strength",
-              "time": "45–60 min",
-              "intensity": "RPE 8",
-              "steps": [
-                "Trap/Hex Bar Deadlift 5×3 @ RPE 8",
-                "Smith Machine Incline Press 4×6–8",
-                "Shoulder Press 3×8–10",
-                "Face Pulls 3×15",
-                "DB RDL 3×10",
-                "Rower: 12 min tempo @ RPE 6–7"
-              ]
-            },
-            {
-              "name": "Day C (Leg Press + Upper Mix)",
-              "type": "Strength + Conditioning",
-              "time": "50–65 min",
-              "intensity": "RPE 8",
-              "steps": [
-                "Leg Press 5×10 (last set AMRAP-2)",
-                "Seated Leg Curl 4×10",
-                "Leg Extension 3×12–15",
-                "Landmine Press 4×8/side",
-                "Cable Row 3×10–12",
-                "Slam Balls 10×10 (90s rest)",
-                "Cooldown + Flexability Posterior 5 min"
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Week 4 (Deload/Build)",
-          "days": [
-            {
-              "name": "Day A (Squat + Pull)",
-              "type": "Strength",
-              "time": "40–55 min",
-              "intensity": "RPE 6–7",
-              "steps": [
-                "Back Squat 4×4 @ RPE 6.5",
-                "Seated Row 3×10–12 (easy pump)",
-                "Lat Pulldown 3×12",
-                "Optional: 5–8 min StairMaster easy"
-              ]
-            },
-            {
-              "name": "Day B (Hinge + Press)",
-              "type": "Strength",
-              "time": "40–55 min",
-              "intensity": "RPE 6–7",
-              "steps": [
-                "Trap/Hex Bar Deadlift 4×2 @ RPE 6.5",
-                "Chest Press 3×10–12 (easy)",
-                "Shoulder Press 3×10–12",
-                "Cable Fly 2×15",
-                "Walk 8–10 min on curved treadmill easy"
-              ]
-            },
-            {
-              "name": "Day C (Leg Press + Upper Mix)",
-              "type": "Strength + Conditioning",
-              "time": "45–60 min",
-              "intensity": "RPE 6–7",
-              "steps": [
-                "Leg Press 3×12 (easy)",
-                "Seated Leg Curl 3×12",
-                "Leg Extension 2×15",
-                "DB Bench 3×10 (light)",
-                "Landmine Row 3×10/side",
-                "Slam Balls 5×10 smooth",
-                "Optional: Sauna 15–20 min"
-              ]
-            }
-          ]
+            { "name": "Deload Day A", "items": ["Use same lifts, 2×6–8 @ RPE 6–7"] },
+            { "name": "Deload Day B", "items": ["Use same lifts, 2×6–8 @ RPE 6–7"] }
+          ],
+          "progression": "Deload volume −40–50%. Evolt 360 re-scan this week."
         }
       ]
     },
     {
-      "id": "4day",
-      "name": "Strength Split — 4×/week",
+      "id": "strength3",
+      "title": "Strength 3-Day (full-body)",
+      "summary": "Balanced heavy/volume across three sessions.",
       "weeks": [
         {
-          "name": "Week 1",
+          "week": 1,
           "days": [
             {
-              "name": "Upper A (Bench Focus)",
-              "type": "Strength",
-              "time": "50–65 min",
-              "intensity": "RPE 7",
-              "steps": [
-                "DB or Smith Incline Press 4×6–8",
-                "Chest Press (selectorized) 3×10–12",
-                "Seated Row 4×8–10",
-                "Lat Pulldown 3×10–12",
-                "DAP Triceps Rope 3×12–15",
-                "Curved Treadmill 8 min easy"
+              "name": "Day 1 — Heavy Lower + Push",
+              "items": [
+                "Back Squat 5×5 @ RPE 7–8",
+                "DB Bench 4×6–8",
+                "Chest-Supported Row 4×8",
+                "Leg Curl 3×10–12",
+                "Cable Face Pull 3×12–15"
               ]
             },
             {
-              "name": "Lower A (Squat)",
-              "type": "Strength",
-              "time": "50–65 min",
-              "intensity": "RPE 7",
-              "steps": [
-                "Back Squat 5×5 @ RPE 7",
-                "Leg Press 3×10–12",
-                "Seated Leg Curl 3×10–12",
-                "Leg Extension 2×15",
-                "Calf Raises on Smith or Leg Press 3×12–15"
+              "name": "Day 2 — Heavy Pull + Single-Leg",
+              "items": [
+                "Trap-bar Deadlift 5×3 @ RPE 7–8",
+                "Bulgarian Split Squat 3×8/leg",
+                "Pull-up / Pulldown 4×6–8",
+                "DB Incline Press 3×8–10",
+                "Farmer Carry 6×20–30 m"
               ]
             },
             {
-              "name": "Upper B (Shoulder/Back)",
-              "type": "Strength",
-              "time": "50–60 min",
-              "intensity": "RPE 7",
-              "steps": [
-                "Shoulder Press (selectorized) 4×8–10",
-                "Landmine Press 3×8/side",
-                "Cable Row (DAP) 4×8–10",
-                "Face Pulls 3×15",
-                "DB Lateral Raise 3×12–15",
-                "Rower 10 min easy"
-              ]
-            },
-            {
-              "name": "Lower B (Hinge)",
-              "type": "Strength + Conditioning",
-              "time": "50–65 min",
-              "intensity": "RPE 7",
-              "steps": [
-                "Trap/Hex Bar Deadlift 5×3 @ RPE 7",
-                "Hack Squat or Leg Press 3×10",
-                "Hamstring Curl 3×10–12",
+              "name": "Day 3 — Volume Lower + Upper Mix",
+              "items": [
+                "Hack Squat or Leg Press 4×10",
+                "Seated Cable Row 4×8–10",
+                "DB OHP 3×8–10",
                 "DB RDL 3×10",
-                "Slam Balls 8×10",
-                "StairMaster 6 min easy"
+                "Cable Curl + Pressdown 3×12–15"
               ]
             }
-          ]
+          ],
+          "progression": "If last set ≤ RPE 8, add 2.5–5 lb next week."
         },
+        { "week": 2, "copyFromWeek": 1, "progression": "Add small load; match reps with clean form." },
+        { "week": 3, "copyFromWeek": 1, "progression": "Push top sets to solid RPE 8, then add 1 back-off set if fresh." },
         {
-          "name": "Week 2",
+          "week": 4,
+          "days": [
+            { "name": "Deload Day 1", "items": ["Main lifts 3×3–5 @ ~70% of Week 3; accessories 2×10"] },
+            { "name": "Deload Day 2", "items": ["Trap-bar DL 3×2–3 light; accessories 2×8–10"] },
+            { "name": "Deload Day 3", "items": ["Machine Lower 3×10 easy; light upper pump 2×12–15"] }
+          ],
+          "progression": "Volume −40–50%. Evolt re-scan."
+        }
+      ]
+    },
+    {
+      "id": "strength4",
+      "title": "Strength 4-Day (Upper/Lower)",
+      "summary": "Undulating focus: Heavy, Volume, Power, Hypertrophy.",
+      "weeks": [
+        {
+          "week": 1,
           "days": [
             {
-              "name": "Upper A",
-              "type": "Strength",
-              "time": "50–65 min",
-              "intensity": "RPE 7–8",
-              "steps": [
-                "Smith Incline Press 5×5",
-                "Chest Press 3×10",
-                "Seated Row 4×8–10 (heavier)",
-                "Lat Pulldown 3×8–10",
-                "DAP Triceps + Cable Curls superset 3×12 each"
-              ]
+              "name": "Mon — Lower (Heavy)",
+              "items": ["Back Squat 5×3–5", "RDL 4×6", "Walking Lunge 3×8/leg", "Hanging Knee Raise 3×10–12"]
             },
             {
-              "name": "Lower A",
-              "type": "Strength",
-              "time": "50–65 min",
-              "intensity": "RPE 7–8",
-              "steps": [
-                "Back Squat 5×4 @ RPE 7.5",
-                "Leg Press 4×8–10",
-                "Seated Leg Curl 3×10–12",
-                "Leg Extension 3×12–15"
-              ]
+              "name": "Tue — Upper (Volume)",
+              "items": ["Bench 4×6–8", "Chest-Supported Row 4×8–10", "DB Incline 3×10", "Pulldown 3×10", "Lateral Raise 2–3×15"]
             },
             {
-              "name": "Upper B",
-              "type": "Strength",
-              "time": "50–60 min",
-              "intensity": "RPE 7–8",
-              "steps": [
-                "Shoulder Press 4×8",
-                "Landmine Press 3×8/side (2s pause overhead)",
-                "Cable Row 4×8–10",
-                "Face Pulls 3×15",
-                "DB Rear Delt Fly 3×12–15"
-              ]
+              "name": "Thu — Lower (Power/Speed)",
+              "items": ["Box Squat or Trap-bar Jump 6×2–3 @50–60%", "BB Hip Thrust 4×6–8", "Leg Press 3×12", "Copenhagen Plank 3×20–30s/side"]
             },
             {
-              "name": "Lower B",
-              "type": "Strength + Conditioning",
-              "time": "50–65 min",
-              "intensity": "RPE 7–8",
-              "steps": [
-                "Trap/Hex Bar Deadlift 6×2 (speed)",
-                "Hack Squat or Leg Press 4×8–10",
-                "DB RDL 3×10",
-                "Slam Balls EMOM 8 min: 8–12 reps",
-                "Curved Treadmill 10 min easy"
-              ]
+              "name": "Fri — Upper (Hypertrophy)",
+              "items": ["DB Bench 4×8–10", "1-Arm DB Row 4×10/side", "Seated DB OHP 3×10", "Cable Row 3×12", "Face Pull + Pushdown 3×12–15"]
             }
-          ]
+          ],
+          "progression": "Heavy days +2.5–5 lb; Volume/Hyper add 1–2 reps or small load @ RPE ≤ 8."
         },
+        { "week": 2, "copyFromWeek": 1, "progression": "Repeat with small progression." },
+        { "week": 3, "copyFromWeek": 1, "progression": "Push heavy top sets to solid RPE 8; keep speed clean on power day." },
         {
-          "name": "Week 3",
+          "week": 4,
           "days": [
-            {
-              "name": "Upper A",
-              "type": "Strength",
-              "time": "50–65 min",
-              "intensity": "RPE 8",
-              "steps": [
-                "DB or Smith Incline Press 5×3–5 (heavy)",
-                "Seated Row 5×6–8",
-                "Lat Pulldown 3×8–10",
-                "DAP Triceps Rope 3×12–15",
-                "Curved Treadmill 8 min easy"
-              ]
-            },
-            {
-              "name": "Lower A",
-              "type": "Strength",
-              "time": "50–65 min",
-              "intensity": "RPE 8",
-              "steps": [
-                "Back Squat 5×3 @ RPE 8",
-                "Leg Press 4×10",
-                "Seated Leg Curl 4×10",
-                "Calf Raises 3×12–15"
-              ]
-            },
-            {
-              "name": "Upper B",
-              "type": "Strength",
-              "time": "50–60 min",
-              "intensity": "RPE 8",
-              "steps": [
-                "Shoulder Press 5×6–8",
-                "Landmine Press 3×8/side",
-                "Cable Row 4×8–10",
-                "Face Pulls 3×15",
-                "DB Lateral Raise 3×12–15"
-              ]
-            },
-            {
-              "name": "Lower B",
-              "type": "Strength + Conditioning",
-              "time": "50–65 min",
-              "intensity": "RPE 8",
-              "steps": [
-                "Trap/Hex Bar Deadlift 5×3",
-                "Hack Squat or Leg Press 4×8–10",
-                "DB RDL 3×10",
-                "Slam Balls 10×10 (90s rest)",
-                "StairMaster 8 min easy"
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Week 4 (Deload/Build)",
-          "days": [
-            {
-              "name": "Upper A",
-              "type": "Strength",
-              "time": "45–55 min",
-              "intensity": "RPE 6–7",
-              "steps": [
-                "Incline Press 3×8 light",
-                "Seated Row 3×10 light",
-                "Lat Pulldown 2×12",
-                "Optional: 8–10 min rower easy"
-              ]
-            },
-            {
-              "name": "Lower A",
-              "type": "Strength",
-              "time": "45–55 min",
-              "intensity": "RPE 6–7",
-              "steps": [
-                "Back Squat 3×5 light",
-                "Leg Press 3×12 easy",
-                "Seated Leg Curl 2×12",
-                "Flexability Posterior 5 min"
-              ]
-            },
-            {
-              "name": "Upper B",
-              "type": "Strength",
-              "time": "45–55 min",
-              "intensity": "RPE 6–7",
-              "steps": [
-                "Shoulder Press 3×10 light",
-                "Cable Row 3×10",
-                "Face Pulls 2×15",
-                "DB Lateral Raise 2×15"
-              ]
-            },
-            {
-              "name": "Lower B",
-              "type": "Strength + Conditioning",
-              "time": "45–55 min",
-              "intensity": "RPE 6–7",
-              "steps": [
-                "Trap/Hex Bar Deadlift 3×3 light/clean",
-                "Hack Squat or Leg Press 3×10 easy",
-                "Slam Balls 5×8 smooth",
-                "Optional: Sauna 15–20 min"
-              ]
-            }
-          ]
+            { "name": "Mon — Lower Deload", "items": ["Back Squat 3×3 light; accessories 2×8–10"] },
+            { "name": "Tue — Upper Deload", "items": ["Bench 3×5 light; back/shoulders 2×12"] },
+            { "name": "Thu — Lower Deload", "items": ["Hip Thrust 3×6 easy; Leg Press 2×12"] },
+            { "name": "Fri — Upper Deload", "items": ["DB Bench 3×8 easy; rows/pulls 2×12"] }
+          ],
+          "progression": "Volume −40–50%. Evolt re-scan."
         }
       ]
     }
+  ],
+  "conditioning": [
+    {
+      "title": "Intervals",
+      "detail": "10× (30s hard / 60s easy) · RPE 8–9 · Alternate bike/rower if desired."
+    },
+    {
+      "title": "Threshold",
+      "detail": "5× (3 min @ RPE 7.5–8 / 2 min easy)."
+    },
+    {
+      "title": "Zone 2 Steady",
+      "detail": "20–30 min @ RPE 5–6. Conversational pace; nasal breathing if possible."
+    },
+    {
+      "title": "Sled Circuit",
+      "detail": "4–6 rounds: Sled Push 20 m • KB Swing 15 • TRX Row 12 • Rest 60–90s."
+    }
+  ],
+  "recovery": [
+    "Pre-Lift Mobility (5 min) before strength days",
+    "Sauna 15–20 min 2–3×/wk; hydrate/electrolytes; cool down 10–15 min",
+    "Post-Sauna Reset (8 min) or Low-Back Decompress (10 min) as needed",
+    "Sleep 7–9h; 6–10k steps/day"
   ]
 }
