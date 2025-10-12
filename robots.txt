@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://j3lfamily.com/sitemap.xml
+Sitemap: https://fitt2120.j3lfamily.com/sitemap.xml
