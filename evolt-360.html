@@ -8,7 +8,66 @@
   <link rel="icon" type="image/png" href="/assets/fitt-logo-32.png" />
   <link rel="stylesheet" href="/styles.css?v=13" />
 
-  <!-- Service JSON-LD for this landing page -->
+  <!-- Match the Sauna page's light theme (scoped) -->
+  <style>
+    body.light-sauna {
+      --bg: #faf7f2;
+      --ink: #1a1409;
+      --muted: #6f6252;
+      --accent: #d8b565;
+      --card: #ffffff;
+      --line: rgba(26, 20, 9, 0.10);
+      --shadow-s: 0 6px 20px rgba(26,20,9,.06);
+    }
+    body.light-sauna { background: var(--bg); color: var(--ink); }
+
+    /* Nav */
+    body.light-sauna .nav {
+      background: var(--card);
+      border-bottom: 1px solid var(--line);
+      box-shadow: 0 4px 20px rgba(26,20,9,.04);
+    }
+    body.light-sauna .nav .links a { color: var(--ink); }
+    body.light-sauna .nav .links a[aria-current="page"] { border-bottom: 2px solid var(--accent); }
+    body.light-sauna .nav .actions .btn { background: var(--accent); color:#1a1409; border:1px solid #caa84f; }
+    body.light-sauna .nav .actions .btn.btn-outline { background: transparent; color: var(--ink); border:1px solid var(--line); }
+
+    /* Cards, chips, buttons */
+    body.light-sauna .hero-card,
+    body.light-sauna .cta,
+    body.light-sauna .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-s);
+    }
+    body.light-sauna .chips .chip { background:#fff7e6; border:1px solid #f0e0b9; color:#7a5f26; }
+    body.light-sauna .btn { background: var(--accent); color:#1a1409; border:1px solid #caa84f; }
+    body.light-sauna .btn.btn-outline { background: transparent; color: var(--ink); border:1px solid var(--line); }
+    body.light-sauna .btn.btn-lg { box-shadow: 0 8px 22px rgba(201,158,62,.18); }
+
+    /* Feature image & section separators */
+    body.light-sauna .feature-card img {
+      border-radius: 18px;
+      box-shadow: 0 12px 36px rgba(26,20,9,.12), 0 0 40px rgba(242,116,39,.08);
+    }
+    body.light-sauna .feature {
+      background: linear-gradient(180deg, #fbf8f2 0%, #ffffff 100%);
+      border-top: 1px solid var(--line);
+    }
+    body.light-sauna .section { border-top: 1px solid var(--line); padding-top: 28px; }
+
+    /* Links */
+    body.light-sauna a { color: #7a5f26; }
+    body.light-sauna a:hover { color: #5f491f; }
+
+    /* Footer */
+    body.light-sauna footer.wrap {
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+    }
+  </style>
+
+  <!-- Service JSON-LD -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -22,7 +81,8 @@
   }
   </script>
 </head>
-<body>
+
+<body class="light-sauna">
   <!-- NAV -->
   <div class="nav" role="navigation" aria-label="Primary">
     <div class="wrap nav-inner">
@@ -35,6 +95,7 @@
         <a href="/#pricing">Pricing</a>
         <a href="/programs.html">Programming</a>
         <a href="/benefits-ir-sauna.html">Benefits of IR Sauna</a>
+        <a href="/evolt-360.html" aria-current="page">Evolt 360 Scan</a>
         <a href="/#location">Location</a>
       </div>
       <div class="actions">
@@ -45,35 +106,59 @@
     </div>
   </div>
 
-  <!-- HERO -->
-  <header class="wrap hero" style="padding-top:48px">
-    <div class="hero-card" role="banner">
+  <!-- HERO (mirrors Sauna layout) -->
+  <header class="wrap hero">
+    <div class="hero-card">
       <div class="hero-inner">
         <div>
-          <h1>EVOLT <span class="grad">360</span> BODY SCAN</h1>
-          <p class="small">60-second body composition scan: body fat %, skeletal muscle, visceral fat rating, and segmental balance.</p>
-          <p class="small">Included with membership. Perfect for baselining and monthly progress checks.</p>
-          <p>
+          <h1>EVOLT <span class="grad">360</span>: KNOW YOUR BASELINE</h1>
+          <p class="small">60-second body composition scan: body fat %, skeletal muscle mass, visceral fat rating, and segmental balance.</p>
+          <div class="chips">
+            <div class="chip">Included with membership</div>
+            <div class="chip">60-sec scan</div>
+            <div class="chip">Monthly check-ins</div>
+          </div>
+          <p style="margin-top:12px">
             <a class="btn btn-lg" href="#" title="Book a Scan">Book a Scan</a>
             <a class="btn btn-outline btn-lg" href="/#pricing" title="Membership">View Membership</a>
           </p>
         </div>
         <div class="cta">
-          <h3>What you get</h3>
+          <h3>Included at J3L FITT</h3>
+          <p class="small">Scans take about a minute. You’ll receive a detailed report and trends over time.</p>
           <ul>
-            <li>Full body composition report (PDF)</li>
-            <li>Segmental muscle & fat distribution</li>
-            <li>Estimated BMR & calorie guidance</li>
-            <li>Trend tracking for challenges & goals</li>
+            <li>✔ Body fat %, skeletal muscle, and segmental balance</li>
+            <li>✔ Estimated BMR & calorie guidance</li>
+            <li>✔ Trend tracking for challenges & goals</li>
+            <li>✔ Staff support to read your first report</li>
           </ul>
+          <p style="margin-top:12px">
+            <a class="btn btn-lg" href="#" title="Book a Scan">Book now</a>
+            <a class="btn btn-outline btn-lg" href="/benefits-ir-sauna.html" title="Sauna">Sauna benefits</a>
+          </p>
         </div>
       </div>
     </div>
   </header>
 
+  <!-- FEATURE IMAGE (optional hero photo) -->
+  <section class="wrap feature">
+    <figure class="feature-card">
+      <img
+        src="/assets/evolt-360.jpg"
+        alt="Evolt 360 body composition analyzer"
+        loading="eager"
+        referrerpolicy="no-referrer"
+      />
+      <figcaption class="small muted" style="text-align:center;margin-top:8px">
+        Evolt 360 Body Composition Analyzer — included with membership
+      </figcaption>
+    </figure>
+  </section>
+
   <!-- HOW IT WORKS -->
   <section class="wrap section">
-    <h2><span class="dot" aria-hidden="true"></span> How it works</h2>
+    <h2><span class="dot"></span> How it works</h2>
     <div class="grid">
       <div class="card">
         <h3>1) Step on</h3>
@@ -84,19 +169,19 @@
         <p>Remain still while the analyzer measures impedance across your body.</p>
       </div>
       <div class="card">
-        <h3>3) Review</h3>
+        <h3>3) Review & track</h3>
         <p>Get your report with body fat %, muscle mass, and segmental balance. Re-scan monthly.</p>
       </div>
     </div>
   </section>
 
-  <!-- FAQ -->
+  <!-- FAQ (kept compact like sauna page) -->
   <section class="wrap section">
-    <h2><span class="dot" aria-hidden="true"></span> FAQ</h2>
+    <h2><span class="dot"></span> FAQ</h2>
     <div class="grid">
       <div class="card">
         <h3>Is it safe?</h3>
-        <p>Yes for most people. Not recommended for pregnancy or anyone with implanted electronic medical devices. Ask staff if unsure.</p>
+        <p>Safe for most people. Not recommended for pregnancy or anyone with implanted electronic medical devices. Ask staff if unsure.</p>
       </div>
       <div class="card">
         <h3>What should I wear?</h3>
@@ -104,7 +189,7 @@
       </div>
       <div class="card">
         <h3>How often should I scan?</h3>
-        <p>Baseline on day one, then every 4 weeks for progress tracking.</p>
+        <p>Baseline on day one, then every 4 weeks to monitor progress.</p>
       </div>
     </div>
   </section>
@@ -128,7 +213,7 @@
   </footer>
 
   <script>
-    // Phone + map wiring (matches the rest of site)
+    // Phone + map wiring (same as other pages)
     const PHONE_HUMAN = "762-242-5030";
     const PHONE_E164  = "+17622425030";
     const ADDRESS     = "5045 Parham Rd, Grovetown, GA 30813";
