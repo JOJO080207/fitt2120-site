@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Programming — J3L FITT</title>
-  <meta name="description" content="Monthly strength, conditioning, and recovery programming for J3L FITT members. Updated every 4 weeks." />
+  <title>Programs — J3L FITT</title>
+  <meta name="description" content="Monthly programming at J3L FITT: 4-week blocks for strength, conditioning, and foundations. Updated every month." />
   <link rel="icon" type="image/png" href="/assets/fitt-logo-32.png" />
   <link rel="stylesheet" href="/styles.css?v=13" />
   <link rel="canonical" href="https://fitt2120.j3lfamily.com/programs.html" />
@@ -38,11 +38,21 @@
     <div class="hero-card">
       <div class="hero-inner">
         <div>
-          <h1>Monthly Programming</h1>
-          <p class="small">We post **4 weeks** at a time. Choose a strength track, add 2–3 conditioning days, and use our recovery guides. Re-scan with <a href="/evolt-360.html">Evolt 360</a> in Week 4.</p>
+          <h1>Monthly <span class="grad">Programming</span></h1>
+          <p class="small">
+            We post <strong>4 weeks</strong> at a time. Choose a strength track, add 2–3 conditioning days,
+            and use our recovery guides. Re-scan with <a href="/evolt-360.html">Evolt 360</a> in Week 4.
+          </p>
+          <div class="chips">
+            <div class="chip">Strength 3-Day</div>
+            <div class="chip">Foundations</div>
+            <div class="chip">Conditioning</div>
+            <div class="chip">Evolt check-ins</div>
+          </div>
+          <p class="small" id="programs-notice" style="margin-top:8px">Loading…</p>
           <p style="margin-top:12px">
-            <a class="btn btn-lg" href="/pre-lift.html">Pre-Lift Mobility</a>
-            <a class="btn btn-outline btn-lg" href="/benefits-ir-sauna.html">Sauna Benefits</a>
+            <a class="btn btn-lg" href="/pre-lift.html" title="Warm-up">Pre-Lift Mobility</a>
+            <a class="btn btn-outline btn-lg" href="/benefits-ir-sauna.html" title="Sauna">Sauna Benefits</a>
           </p>
         </div>
         <div class="cta">
@@ -58,19 +68,24 @@
     </div>
   </header>
 
-  <!-- PROGRAMS RENDER -->
-  <section class="wrap section" id="programs-root">
-    <!-- programs.js will inject content here -->
-    <div class="card"><p class="small">Loading monthly programming…</p></div>
+  <!-- MONTHLY PROGRAMMING (populated by programs.js from programs.json) -->
+  <section class="wrap section" id="programs-monthly">
+    <h2><span class="dot" aria-hidden="true"></span> This Month’s 4-Week Block</h2>
+    <div id="monthly-programming" class="stack">
+      <div class="card"><p class="small">Loading monthly programming…</p></div>
+    </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="wrap">
-    <p>© <span id="year"></span> J3L FITT • Retired Sergeants Major • No fluff. Train hard. Recover smart. • <a href="/sitemap.html">Sitemap</a></p>
+    <p>© <span id="year"></span> J3L FITT • Retired Sergeants Major • No fluff. Train hard. Recover smart. •
+      <a href="/sitemap.html">Sitemap</a>
+    </p>
   </footer>
 
   <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
-  <!-- Data & Renderer -->
-  <script src="/programs.js?v=2"></script>
+
+  <!-- Renderer (expects programs.json in the same folder) -->
+  <script src="./programs.js"></script>
 </body>
 </html>
