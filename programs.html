@@ -69,7 +69,7 @@
   </header>
 
   <!-- MONTHLY PROGRAMMING -->
-  <section class="wrap section" id="programs-monthly">
+  <section class="wrap section">
     <h2><span class="dot" aria-hidden="true"></span> This Month’s 4-Week Block</h2>
     <div id="monthly-programming" class="stack">
       <div class="card"><p class="small">Loading monthly programming…</p></div>
@@ -85,103 +85,105 @@
 
   <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 
-  <!-- Embedded fallback JSON (used only if fetching /programs.json fails) -->
+  <!-- Embedded fallback JSON (edit here monthly if you prefer) -->
   <script type="application/json" id="programs-embedded">
   {
     "cycle_title": "Monthly Programming — 4-Week Block",
     "cycle_code": "2025-10",
-    "notes": "Update this file monthly. Weeks 1–3 progressive, Week 4 deload (-40–50% volume). New block starts next month.",
+    "notes": "Update monthly. Weeks 1–3 progress, Week 4 deload (-40–50% volume).",
     "tracks": [
       {
-        "id": "strength3",
-        "name": "Strength (3 days/week)",
-        "summary": "Full-body strength with progressive overload.",
+        "name": "Foundations (2–3 days/week)",
+        "summary": "Technique-first for new/returning lifters. Linear load, tempo focus.",
         "weeks": [
           {
-            "title": "Week 1",
+            "title": "Week 1 (repeat for Weeks 2–3 with progression)",
             "days": [
-              { "name": "Day 1 — Heavy Lower + Push",
-                "items": ["Back Squat 5×5 @ RPE 7–8","DB Bench Press 4×6–8","Chest-Supported Row 4×8","Leg Curl (machine) 3×10–12","Cable Face Pull 3×12–15"]},
-              { "name": "Day 2 — Heavy Pull + Single-Leg",
-                "items": ["Trap-bar Deadlift 5×3 @ RPE 7–8","Bulgarian Split Squat 3×8/leg","Lat Pulldown or Pull-up 4×6–8","DB Incline Press 3×8–10","Farmer Carry 6×20–30 m"]},
-              { "name": "Day 3 — Volume Lower + Upper Mix",
-                "items": ["Hack Squat or Leg Press 4×10","Seated Cable Row 4×8–10","Overhead DB Press 3×8–10","DB RDL 3×10","Cable Curl + Triceps Pressdown 3×12–15"]}
-            ]
-          },
-          {
-            "title": "Week 2",
-            "days": [
-              {"name": "Progression notes","items": ["+2.5–5 lb on main lifts if last set ≤ RPE 8","Add 1–2 reps on accessories where possible"]},
-              {"name": "Repeat Day 1","items": ["Same as Week 1 Day 1 with progression"]},
-              {"name": "Repeat Day 2","items": ["Same as Week 1 Day 2 with progression"]},
-              {"name": "Repeat Day 3","items": ["Same as Week 1 Day 3 with progression"]}
-            ]
-          },
-          {
-            "title": "Week 3",
-            "days": [
-              {"name": "Progression notes","items": ["Same progression as Week 2","Aim RPE 8 on the final set of mains"]},
-              {"name": "Repeat Day 1","items": ["Progress weights/reps"]},
-              {"name": "Repeat Day 2","items": ["Progress weights/reps"]},
-              {"name": "Repeat Day 3","items": ["Progress weights/reps"]}
+              {"name": "Day A — Squat + Push + Pull",
+               "items": ["Goblet Squat 4×6–8 (2–3s down)","DB Bench Press 4×6–8","Seated Cable Row 4×8–10","DB RDL 3×8","Paloff Press 3×10/side"]},
+              {"name": "Day B — Hinge + Push + Pull",
+               "items": ["Trap-bar Deadlift or Rack Pull 4×5","Incline DB Press 3×8–10","Lat Pulldown 4×6–8","Split Squat 3×8/leg","Side Plank 3×30–45s/side"]},
+              {"name": "Optional Day C — Single-Leg + Upper Mix",
+               "items": ["Reverse Lunge 4×8/leg","One-Arm DB Row 4×8/side","Push-ups (or Smith) 3×AMRAP −2","Leg Press 3×10","Farmer Carry 6×20–30 m"]}
             ]
           },
           {
             "title": "Week 4 — Deload",
             "days": [
-              {"name": "All three days","items": ["Perform the same lifts with ~50–60% of Week 3 volume","Keep intensity around RPE 6–7","Optional: Swap one accessory for technique work"]},
-              {"name": "Evolt 360 Scan","items": ["Re-scan this week to adjust targets for next block"]}
+              {"name": "All sessions","items": ["2×6–8 on each main lift @ RPE 6–7","Technique focus > load","Optional Evolt 360 re-scan"]}
             ]
           }
         ]
       },
       {
-        "id": "conditioning",
+        "name": "Strength (3 days/week)",
+        "summary": "Balanced heavy/volume across three sessions.",
+        "weeks": [
+          {
+            "title": "Week 1",
+            "days": [
+              {"name": "Day 1 — Heavy Lower + Push",
+               "items": ["Back Squat 5×5 @ RPE 7–8","DB Bench 4×6–8","Chest-Supported Row 4×8","Leg Curl 3×10–12","Cable Face Pull 3×12–15"]},
+              {"name": "Day 2 — Heavy Pull + Single-Leg",
+               "items": ["Trap-bar Deadlift 5×3 @ RPE 7–8","Bulgarian Split Squat 3×8/leg","Pull-up / Pulldown 4×6–8","DB Incline Press 3×8–10","Farmer Carry 6×20–30 m"]},
+              {"name": "Day 3 — Volume Lower + Upper Mix",
+               "items": ["Hack Squat or Leg Press 4×10","Seated Cable Row 4×8–10","Overhead DB Press 3×8–10","DB RDL 3×10","Cable Curl + Pressdown 3×12–15"]}
+            ]
+          },
+          {
+            "title": "Week 2",
+            "days": [
+              {"name": "Progression","items": ["+2.5–5 lb on mains if last set ≤ RPE 8","Add 1–2 reps on accessories where possible"]},
+              {"name": "Repeat Day 1","items": ["Progress weights/reps"]},
+              {"name": "Repeat Day 2","items": ["Progress weights/reps"]},
+              {"name": "Repeat Day 3","items": ["Progress weights/reps"]}
+            ]
+          },
+          {"title": "Week 3","days": [
+            {"name":"Repeat Days","items":["Same lifts with progression; aim RPE 8 on final sets"]}]},
+          {"title": "Week 4 — Deload","days": [
+            {"name":"All three days","items":["Use ~50–60% of Week 3 volume","Keep RPE 6–7","Optional technique swaps"]},
+            {"name":"Evolt 360 Scan","items":["Re-scan this week to adjust targets for next block"]}]}
+        ]
+      },
+      {
+        "name": "Strength (4 days/week)",
+        "summary": "Undulating focus: Heavy, Volume, Power, Hypertrophy.",
+        "weeks": [
+          {
+            "title": "Week 1 (repeat with progression for Weeks 2–3)",
+            "days": [
+              {"name":"Mon — Lower (Heavy)","items":["Back Squat 5×3–5","RDL 4×6","Walking Lunge 3×8/leg","Hanging Knee Raise 3×10–12"]},
+              {"name":"Tue — Upper (Volume)","items":["Bench 4×6–8","Chest-Supported Row 4×8–10","DB Incline 3×10","Pulldown 3×10","Lateral Raise 2–3×15"]},
+              {"name":"Thu — Lower (Power/Speed)","items":["Box Squat or Trap-bar Jump 6×2–3 @50–60%","BB Hip Thrust 4×6–8","Leg Press 3×12"]},
+              {"name":"Fri — Upper (Hypertrophy)","items":["Incline DB 4×8–10","One-arm Row 4×10","Cable Fly 3×12–15","Curls + Pressdown 3×12–15"]}
+            ]
+          },
+          {"title": "Week 4 — Deload","days": [
+            {"name":"All sessions","items":["Reduce volume by ~50%","Keep RPE ≤ 6–7","Technique and range focus"]}]}
+        ]
+      },
+      {
         "name": "Conditioning (2–3 days/week)",
         "summary": "Intervals, threshold, and Zone 2 to support recovery and work capacity.",
         "weeks": [
           {
             "title": "Weeks 1–3",
             "days": [
-              {"name": "Session A — Intervals","items": ["10 rounds: 30s ON / 60s OFF (RPE 8–9)","Bike/Row/Treadmill; alternate machines if desired"]},
-              {"name": "Session B — Threshold","items": ["5 × (3 min @ RPE 7.5–8 / 2 min easy)","Nasal breathing if possible on recoveries"]},
-              {"name": "Optional Session C — Zone 2","items": ["20–30 min continuous @ RPE 5–6","Keep HR conversational; finish feeling fresh"]}
+              {"name":"Session A — Intervals","items":["10 rounds: 30s ON / 60s OFF (RPE 8–9)","Bike/Row/Treadmill; alternate machines if desired"]},
+              {"name":"Session B — Threshold","items":["5 × (3 min @ RPE 7.5–8 / 2 min easy)","Nasal breathing on recoveries if possible"]},
+              {"name":"Optional Session C — Zone 2","items":["20–30 min continuous @ RPE 5–6","Keep HR conversational; finish feeling fresh"]}
             ]
           },
-          {
-            "title": "Week 4 — Deload",
-            "days": [
-              {"name": "1–2 light sessions","items": ["Pick any 1–2 above templates","Reduce total time by ~40–50%","Keep RPE ≤ 6"]}
-            ]
-          }
-        ]
-      },
-      {
-        "id": "foundations",
-        "name": "Foundations (2–3 days/week)",
-        "summary": "Technique-first for new/returning lifters.",
-        "weeks": [
-          {
-            "title": "Week 1 (repeat with progression for Weeks 2–3)",
-            "days": [
-              {"name": "Day A — Squat + Push + Pull","items": ["Goblet Squat 4×6–8 (2–3s down)","DB Bench 4×6–8","Seated Cable Row 4×8–10","DB RDL 3×8","Paloff Press 3×10/side"]},
-              {"name": "Day B — Hinge + Push + Pull","items": ["Trap-bar Deadlift (or Rack Pull) 4×5","Incline DB Press 3×8–10","Lat Pulldown 4×6–8","Split Squat 3×8/leg","Side Plank 3×30–45s/side"]},
-              {"name": "Day C — Single-Leg + Upper Mix (optional)","items": ["Reverse Lunge 4×8/leg","One-Arm DB Row 4×8/side","Push-ups (or Smith) 3×AMRAP −2","Machine Leg Press 3×10","Farmer Carry 6×20–30 m"]}
-            ]
-          },
-          {
-            "title": "Week 4 — Deload",
-            "days": [
-              {"name": "All sessions","items": ["2×6–8 on each main lift @ RPE 6–7","Technique focus > load","Optional Evolt 360 re-scan if this is your Month 1"]}
-            ]
-          }
+          {"title": "Week 4 — Deload","days": [
+            {"name":"1–2 light sessions","items":["Pick any 1–2 templates above","Reduce total time by ~40–50%","Keep RPE ≤ 6"]}]}
         ]
       }
     ],
     "recovery": {
       "warmup": "Use Pre-Lift Mobility (5 min) before strength days.",
       "post": [
-        "Infrared Sauna: 15–20 min (2–3×/week), hydrate + electrolytes; cool down after.",
+        "Infrared Sauna: 15–20 min (2–3×/week). Hydrate + electrolytes; cool down after.",
         "Post-Sauna Reset (8 min) on combo days.",
         "Low-Back Decompress (10 min) after heavy hinge days."
       ],
@@ -190,22 +192,22 @@
   }
   </script>
 
-  <!-- Renderer: tries ./programs.json first, falls back to embedded JSON -->
+  <!-- Inline renderer (defensive against key mismatches) -->
   <script>
   (async function () {
     const container = document.getElementById("monthly-programming");
     const notice = document.getElementById("programs-notice");
     const setNotice = (m)=>{ if(notice) notice.textContent = m; };
 
-    function card(html) { const d=document.createElement("div"); d.className="card"; d.innerHTML=html; return d; }
+    const pick = (...vals) => vals.find(v => typeof v === "string" && v.trim().length) || "";
+    const card = (html) => { const d=document.createElement("div"); d.className="card"; d.innerHTML=html; return d; };
 
     async function getData() {
       try {
         const res = await fetch("./programs.json", { cache: "no-store" });
-        if (!res.ok) throw new Error("fetch failed " + res.status);
+        if (!res.ok) throw new Error("fetch programs.json " + res.status);
         return await res.json();
       } catch (e) {
-        // Fallback: embedded JSON
         const node = document.getElementById("programs-embedded");
         if (!node) throw e;
         return JSON.parse(node.textContent || "{}");
@@ -214,37 +216,51 @@
 
     try {
       const data = await getData();
+
       container.innerHTML = "";
+      const cycleTitle = pick(data.cycle_title, data.title, "Monthly Programming");
+      const cycleNotes = data.notes || "";
 
       container.appendChild(card(`
-        <h2><span class="dot" aria-hidden="true"></span> ${data.cycle_title || "Monthly Programming"}</h2>
-        <p class="small muted">${data.notes || ""}</p>
+        <h2><span class="dot" aria-hidden="true"></span> ${cycleTitle}</h2>
+        <p class="small muted">${cycleNotes}</p>
       `));
 
       const grid = document.createElement("div");
       grid.className = "grid";
-      (data.tracks || []).forEach(track => {
+
+      (data.tracks || []).forEach((track, idx) => {
+        const trackTitle = pick(track.name, track.title, `Program ${idx+1}`);
+        const trackSummary = pick(track.summary, track.description, "");
+
         const t = document.createElement("div");
         t.className = "card";
-        t.innerHTML = `<h3>${track.name}</h3><p class="small">${track.summary || ""}</p>`;
-        (track.weeks || []).forEach(week => {
+        t.innerHTML = `<h3>${trackTitle}</h3><p class="small">${trackSummary}</p>`;
+
+        (track.weeks || []).forEach((week, wIdx) => {
+          const weekTitle = pick(week.title, week.name, `Week ${wIdx+1}`);
           const w = document.createElement("div");
           w.style.marginTop = "10px";
-          w.innerHTML = `<h4 style="margin-bottom:6px">${week.title}</h4>`;
+          w.innerHTML = `<h4 style="margin-bottom:6px">${weekTitle}</h4>`;
+
           (week.days || []).forEach(day => {
+            const dayName = pick(day.name, day.title, "Session");
             const items = (day.items || []).map(i => `<li>${i}</li>`).join("");
             const blk = document.createElement("div");
             blk.style.margin = "6px 0 10px";
             blk.innerHTML = `
-              <div class="small" style="font-weight:600">${day.name}</div>
+              <div class="small" style="font-weight:600">${dayName}</div>
               <ul class="small" style="margin-top:4px">${items}</ul>
             `;
             w.appendChild(blk);
           });
+
           t.appendChild(w);
         });
+
         grid.appendChild(t);
       });
+
       container.appendChild(grid);
 
       if (data.recovery) {
