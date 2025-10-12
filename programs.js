@@ -1,110 +1,80 @@
 <script>
-async function loadPrograms() {
+(async function () {
+  const container = document.getElementById("monthly-programming");
+  const notice = document.getElementById("programs-notice");
+
+  function setNotice(msg){ if (notice) notice.textContent = msg; }
+
   try {
-    const res = await fetch('/programs.json?v=' + Date.now());
+    // Use relative path to avoid any subpath/domain quirks
+    const res = await fetch("./programs.json", { cache: "no-store" });
+    if (!res.ok) throw new Error("programs.json fetch failed: " + res.status);
+
     const data = await res.json();
-    renderPrograms(data);
-  } catch (e) {
-    console.error('Failed to load programs.json', e);
-    const container = document.getElementById('programs-root');
-    if (container) container.innerHTML = '<div class="card"><p>Unable to load programming right now.</p></div>';
-  }
-}
 
-function renderPrograms(data) {
-  const root = document.getElementById('programs-root');
-  if (!root) return;
-
-  // Header
-  root.innerHTML = `
-    <div class="card" style="margin-bottom:16px">
-      <h2 style="margin:0 0 6px"><span class="dot"></span> Monthly Programming</h2>
-      <p class="small" style="margin:0">Block: <strong>${escapeHtml(data.monthLabel || '')}</strong> — ${escapeHtml(data.note || '')}</p>
-    </div>
-  `;
-
-  // Tracks
-  const grid = document.createElement('div');
-  grid.className = 'grid';
-
-  (data.tracks || []).forEach(track => {
-    const card = document.createElement('div');
-    card.className = 'card';
-    card.innerHTML = `
-      <h3>${escapeHtml(track.title)}</h3>
-      <p class="small">${escapeHtml(track.summary || '')}</p>
-      ${renderWeeks(track.weeks || [])}
+    // Header
+    const header = document.createElement("div");
+    header.className = "card";
+    header.innerHTML = `
+      <h2><span class="dot" aria-hidden="true"></span> ${data.cycle_title}</h2>
+      <p class="small muted">${data.notes}</p>
     `;
-    grid.appendChild(card);
-  });
+    container.appendChild(header);
 
-  root.appendChild(grid);
-
-  // Conditioning + Recovery
-  const extras = document.createElement('div');
-  extras.className = 'grid';
-  extras.innerHTML = `
-    <div class="card">
-      <h3>Conditioning Options</h3>
-      <ul>${(data.conditioning || []).map(c => `<li><strong>${escapeHtml(c.title)}:</strong> ${escapeHtml(c.detail)}</li>`).join('')}</ul>
-    </div>
-    <div class="card">
-      <h3>Recovery</h3>
-      <ul>${(data.recovery || []).map(r => `<li>${escapeHtml(r)}</li>`).join('')}</ul>
-      <p style="margin-top:8px"><a class="btn btn-outline" href="/benefits-ir-sauna.html">Sauna Benefits</a> <a class="btn btn-outline" href="/pre-lift.html">Pre-Lift Mobility</a></p>
-    </div>
-  `;
-  root.appendChild(extras);
-
-  // Expand/collapse behavior
-  document.querySelectorAll('[data-accordion]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const target = document.getElementById(btn.getAttribute('aria-controls'));
-      const expanded = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', String(!expanded));
-      if (target) target.hidden = expanded;
-    });
-  });
-}
-
-function renderWeeks(weeks) {
-  return weeks.map(wk => {
-    // If week copies from another, display note
-    let body = '';
-    if (wk.copyFromWeek) {
-      body = `<p class="small muted">Same exercises as Week ${wk.copyFromWeek}. ${wk.progression ? escapeHtml(wk.progression) : ''}</p>`;
-    } else {
-      body = `
-        <div class="grid" style="margin-top:6px">
-          ${wk.days.map(d =>
-            `<div class="card" style="border:1px dashed rgba(255,255,255,.08)">
-               <h4 style="margin:0 0 6px">${escapeHtml(d.name)}</h4>
-               <ul>${(d.items||[]).map(it => `<li>${escapeHtml(it)}</li>`).join('')}</ul>
-             </div>`
-          ).join('')}
-        </div>
-        ${wk.progression ? `<p class="small muted" style="margin-top:6px">${escapeHtml(wk.progression)}</p>` : ''}
+    // Tracks
+    const grid = document.createElement("div");
+    grid.className = "grid";
+    (data.tracks || []).forEach(track => {
+      const card = document.createElement("div");
+      card.className = "card";
+      card.innerHTML = `
+        <h3>${track.name}</h3>
+        <p class="small">${track.summary || ""}</p>
       `;
+      (track.weeks || []).forEach(week => {
+        const weekEl = document.createElement("div");
+        weekEl.style.marginTop = "10px";
+        weekEl.innerHTML = `<h4 style="margin-bottom:6px">${week.title}</h4>`;
+        (week.days || []).forEach(day => {
+          const items = (day.items || []).map(i => `<li>${i}</li>`).join("");
+          const block = document.createElement("div");
+          block.style.margin = "6px 0 10px";
+          block.innerHTML = `
+            <div class="small" style="font-weight:600">${day.name}</div>
+            <ul class="small" style="margin-top:4px">${items}</ul>
+          `;
+          weekEl.appendChild(block);
+        });
+        card.appendChild(weekEl);
+      });
+      grid.appendChild(card);
+    });
+    container.appendChild(grid);
+
+    // Recovery
+    if (data.recovery) {
+      const rec = document.createElement("div");
+      rec.className = "card";
+      rec.innerHTML = `
+        <h3>Recovery & Mobility</h3>
+        <p><strong>Warm-up:</strong> ${data.recovery.warmup || ""}</p>
+        <ul class="small">${(data.recovery.post || []).map(i => `<li>${i}</li>`).join("")}</ul>
+        <p class="small muted">${data.recovery.notes || ""}</p>
+      `;
+      container.appendChild(rec);
     }
 
-    const sectionId = `week-${wk.week}-${Math.random().toString(36).slice(2,7)}`;
-    return `
-      <div class="week">
-        <button class="btn btn-outline" data-accordion aria-expanded="false" aria-controls="${sectionId}" style="width:100%; text-align:left; display:flex; justify-content:space-between; align-items:center; margin:10px 0">
-          <span>Week ${wk.week}</span>
-          <span aria-hidden="true">▸</span>
-        </button>
-        <div id="${sectionId}" hidden>
-          ${body}
+    setNotice("Updated monthly • Cycle: " + (data.cycle_code || ""));
+  } catch (err) {
+    console.error(err);
+    setNotice("Could not load monthly programming.");
+    if (container) {
+      container.innerHTML = `
+        <div class="card">
+          <p>We’re updating the monthly plan. If this persists, make sure <code>programs.json</code> is in the site root and valid JSON.</p>
         </div>
-      </div>
-    `;
-  }).join('');
-}
-
-function escapeHtml(str) {
-  return String(str).replace(/[&<>"']/g, s => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[s]));
-}
-
-document.addEventListener('DOMContentLoaded', loadPrograms);
+      `;
+    }
+  }
+})();
 </script>
