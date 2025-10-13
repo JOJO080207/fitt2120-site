@@ -236,7 +236,7 @@ footer{
 
 /* Motion-safety */
 @media (prefers-reduced-motion:reduce){
-  *{animation:none !important;transition:none !Important}
+  *{animation:none !important;transition:none !important}
 }
 
 /* =========================================================
@@ -323,4 +323,18 @@ body.light-site a:hover{color:#5f491f}
 body.light-site footer{
   color:var(--muted);
   border-top:1px solid var(--line);
+}
+
+/* ===== Feature image sizing on light pages (show whole image, no scroll) ===== */
+body.light-site .feature-card img{
+  width:100%;
+  height:auto;         /* override dark's fixed height */
+  max-height:520px;    /* desktop cap */
+  object-fit:contain;  /* keep full image visible */
+}
+@media (max-width:1024px){
+  body.light-site .feature-card img{ max-height:440px; }
+}
+@media (max-width:640px){
+  body.light-site .feature-card img{ max-height:320px; }
 }
