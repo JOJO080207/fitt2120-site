@@ -6,7 +6,7 @@
   <title>Pre-Lift Mobility (5 min) — J3L FITT</title>
   <meta name="description" content="Quick 5-minute warm-up to prep hips, T-spine, and shoulders before you train. No special machine required. Optional 60-sec Evolt 360 body scan to baseline progress." />
   <link rel="icon" type="image/png" href="/assets/fitt-logo-32.png" />
-  <link rel="stylesheet" href="/styles.css?v=13" />
+  <link rel="stylesheet" href="/styles.css?v=14" />
 
   <!-- Breadcrumb JSON-LD -->
   <script type="application/ld+json">
@@ -22,8 +22,50 @@
     }]
   }
   </script>
+
+  <!-- Light theme (scoped like Sauna/Evolt) -->
+  <style>
+    body.light-sauna {
+      --bg: #faf7f2;
+      --ink: #1a1409;
+      --muted: #6f6252;
+      --accent: #d8b565;
+      --card: #ffffff;
+      --line: rgba(26, 20, 9, 0.10);
+      --shadow-s: 0 6px 20px rgba(26,20,9,.06);
+    }
+    body.light-sauna { background: var(--bg); color: var(--ink); }
+
+    /* Nav */
+    body.light-sauna .nav { background: var(--card); border-bottom: 1px solid var(--line); box-shadow: 0 4px 20px rgba(26,20,9,.04); }
+    body.light-sauna .nav .links a { color: var(--ink); }
+    body.light-sauna .nav .links a[aria-current="page"] { border-bottom: 2px solid var(--accent); }
+    body.light-sauna .nav .actions .btn { background: var(--accent); color:#1a1409; border:1px solid #caa84f; }
+    body.light-sauna .nav .actions .btn.btn-outline { background: transparent; color: var(--ink); border:1px solid var(--line); }
+
+    /* Cards & buttons */
+    body.light-sauna .hero-card,
+    body.light-sauna .cta,
+    body.light-sauna .card { background: var(--card); border: 1px solid var(--line); box-shadow: var(--shadow-s); }
+    body.light-sauna .btn { background: var(--accent); color:#1a1409; border:1px solid #caa84f; }
+    body.light-sauna .btn.btn-outline { background: transparent; color: var(--ink); border:1px solid var(--line); }
+    body.light-sauna .btn.btn-lg { box-shadow: 0 8px 22px rgba(201,158,62,.18); }
+
+    /* Sections */
+    body.light-sauna .section { border-top: 1px solid var(--line); padding-top: 28px; }
+
+    /* Links */
+    body.light-sauna a { color: #7a5f26; }
+    body.light-sauna a:hover { color: #5f491f; }
+
+    /* Map card */
+    body.light-sauna .map { background: var(--card); border: 1px solid var(--line); box-shadow: var(--shadow-s); border-radius: 18px; overflow: hidden; }
+
+    /* Footer */
+    body.light-sauna footer.wrap { color: var(--muted); border-top: 1px solid var(--line); }
+  </style>
 </head>
-<body>
+<body class="light-sauna">
 
   <!-- NAV -->
   <div class="nav" role="navigation" aria-label="Primary">
