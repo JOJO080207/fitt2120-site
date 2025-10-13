@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Bebas+Neue&display=swap');
 
 /* ================================
-   Dark theme palette (J3L FITT)
+   Dark theme palette (J3L FITT) — DEFAULT
 ================================ */
 :root{
   --bg:#0a0a08;        /* near-black background */
@@ -85,7 +85,8 @@ hr{border:0;border-top:1px solid var(--line);margin:26px 0}
 .nav .links{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
 .nav .links a{color:var(--muted);font-weight:600;letter-spacing:.2px}
 .nav .links a:hover{color:var(--ink)}
-.nav .links a.active{
+.nav .links a.active,
+.nav .links a[aria-current="page"]{
   color:var(--ink);
   border-bottom:2px solid var(--accent);
   padding-bottom:2px;
@@ -235,5 +236,91 @@ footer{
 
 /* Motion-safety */
 @media (prefers-reduced-motion:reduce){
-  *{animation:none !important;transition:none !important}
+  *{animation:none !important;transition:none !Important}
+}
+
+/* =========================================================
+   LIGHT THEME (site-wide) — Enable with <body class="light-site">
+   This reuses your components and simply swaps palette + a few overrides
+========================================================= */
+body.light-site{
+  /* palette */
+  --bg:#faf7f2;
+  --ink:#1a1409;
+  --muted:#6f6252;
+  --accent:#d8b565;
+  --accent2:#e2c577;
+  --card:#ffffff;
+  --line:rgba(26, 20, 9, 0.10);
+
+  --shadow-s:0 6px 20px rgba(26,20,9,.06);
+  --shadow-m:0 12px 36px rgba(26,20,9,.10);
+  --shadow-nav:0 6px 18px rgba(26,20,9,.08);
+
+  background:var(--bg);
+  color:var(--ink);
+}
+
+/* Nav in light mode */
+body.light-site .nav{
+  background:var(--card);
+  border-bottom:1px solid var(--line);
+  backdrop-filter:none;
+  box-shadow:var(--shadow-nav);
+}
+body.light-site .nav .links a{color:var(--ink)}
+body.light-site .nav .links a[aria-current="page"],
+body.light-site .nav .links a.active{
+  border-bottom:2px solid var(--accent);
+}
+
+/* Cards / hero / cta */
+body.light-site .hero-card,
+body.light-site .cta,
+body.light-site .card{
+  background:var(--card);
+  border:1px solid var(--line);
+  box-shadow:var(--shadow-s);
+}
+
+/* Buttons */
+body.light-site .btn{
+  color:#1a1409;
+  border:1px solid #caa84f;
+  box-shadow:0 8px 22px rgba(201,158,62,.18);
+}
+body.light-site .btn-outline{
+  color:var(--ink);
+  border:1px solid var(--line);
+}
+
+/* Chips (override hard-coded dark chip colors) */
+body.light-site .chip{
+  background:#fff7e6;
+  border:1px solid #f0e0b9;
+  color:#7a5f26;
+}
+
+/* Icon tile backgrounds for light */
+body.light-site .icon{
+  background:#fffaf0;
+  border:1px solid #eadbb5;
+}
+
+/* Feature section flavor */
+body.light-site .feature{
+  background:linear-gradient(180deg,#fbf8f2 0%, #ffffff 100%);
+  border-top:1px solid var(--line);
+}
+body.light-site .feature-card img{
+  border-radius:18px;
+  box-shadow:0 12px 36px rgba(26,20,9,.12), 0 0 40px rgba(242,116,39,.08);
+}
+
+/* Links & footer */
+body.light-site a{color:#7a5f26}
+body.light-site a:hover{color:#5f491f}
+body.light-site footer{
+  color:var(--muted);
+  border-top:1px solid var(--line);
 }
