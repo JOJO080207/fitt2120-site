@@ -8,7 +8,7 @@
   <meta property="og:title" content="Benefits of Infrared Sauna — J3L FITT" />
   <meta property="og:description" content="Detoxification, weight loss support, muscle recovery, sleep, skin, heart health, immunity, relaxation — plus safe-use tips." />
   <link rel="icon" type="image/png" href="/assets/fitt-logo-32.png" />
-  <link rel="stylesheet" href="/styles.css?v=12" />
+  <link rel="stylesheet" href="/styles.css?v=14" />
 
   <!-- Light / wellness look scoped to this page -->
   <style>
@@ -225,19 +225,21 @@
         <p>Phone: <a href="tel:+17622425030">(762) 242-5030</a></p>
       </div>
       <div class="map">
-        <iframe id="map-iframe" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe id="map-iframe" title="Map to J3L FITT" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   </section>
 
   <footer class="wrap">
-    <p>© J3L FITT • Retired Sergeants Major • No fluff. Train hard. Recover smart. • <a href="tel:+17622425030">(762) 242-5030</a></p>
+    <p>© <span id="year"></span> J3L FITT • Retired Sergeants Major • No fluff. Train hard. Recover smart. • <a href="tel:+17622425030">(762) 242-5030</a></p>
   </footer>
 
   <script>
     const ADDRESS = "5045 Parham Rd";
-    document.getElementById('map-iframe').src =
-      "https://www.google.com/maps?q=" + encodeURIComponent(ADDRESS) + "&output=embed";
+    const map = document.getElementById('map-iframe');
+    if (map) map.src = "https://www.google.com/maps?q=" + encodeURIComponent(ADDRESS) + "&output=embed";
+    const y = document.getElementById('year');
+    if (y) y.textContent = new Date().getFullYear();
   </script>
 
   <!-- Tidio chat widget -->
